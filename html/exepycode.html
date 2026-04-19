@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How And Where to Execute Python Code</title>
+
+<style>
+:root {
+  --bg-main: #0b1220;
+  --bg-secondary: #111a2e;
+  --card-bg: rgba(20, 32, 58, 0.75);
+  --accent: #4da6ff;
+  --accent-secondary: #ffd43b;
+  --text-main: #e6ecff;
+  --text-muted: #a9b6d3;
+  --border: rgba(255,255,255,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #14213d, #0b1220 60%);
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  margin-top: 15px;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: auto;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px 80px;
+}
+
+section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+  color: var(--accent-secondary);
+}
+
+p {
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+
+ul {
+  margin: 15px 0 0 20px;
+}
+
+.python-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.python-icon {
+  width: 300px;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-15px); }
+}
+
+/* COMMENT SECTION */
+.comment-box input,
+.comment-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #0e172b;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: white;
+}
+
+.comment-box textarea {
+  min-height: 120px;
+}
+
+.comment-box button {
+  margin-top: 12px;
+  padding: 12px 20px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.comment {
+  background: #0f1b33;
+  border: 1px solid var(--border);
+  padding: 15px;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+
+.comment b {
+  color: var(--accent);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>How And Where to Execute Python Code</h1>
+<p>A complete guide to running Python code on your computer, online platforms, and advanced development environments.</p>
+
+<div class="python-wrapper">
+<img class="python-icon" src="https://www.python.org/static/community_logos/python-logo.png">
+</div>
+</header>
+
+<div class="container">
+
+<section>
+<h2>1. What Does “Execute Python Code” Mean?</h2>
+<p>Executing Python code means running your program so that the computer understands and performs the instructions written in Python. This can be done using different tools depending on your level and purpose.</p>
+</section>
+
+<section>
+<h2>2. Running Python on Your Computer</h2>
+
+<h3>Install Python</h3>
+<p>Download Python from the official website and install it on your system.</p>
+  <a href="https://www.python.org/downloads/">Click Here To Install Python In Your Computer From Official Website</a>
+<h2>How To Use Python On A Computer<h2>
+<h3>Using Command Line</h3>
+<ul>
+<li>Open Command Prompt (Windows) or Terminal (Mac/Linux)</li>
+<li>Type <b>python</b> to open interpreter</li>
+<li>Run files using: <b>python filename.py</b></li>
+</ul>
+
+<h3>Using IDLE</h3>
+<p>IDLE comes with Python installation and allows you to write and run code easily.</p>
+</section>
+
+<section>
+<h2>3. Best Code Editors Or IDE's (Offline)</h2>
+<ul>
+<li>VS Code (Most popular) That I Personally Use And It Is My Favourite.</li>
+<li>PyCharm (Professional IDE)</li>
+<li>Sublime Text (Lightweight)</li>
+</ul>
+<p>These editors provide features like debugging, auto-completion, and extensions.</p>
+</section>
+
+<section>
+<h2>4. Online Platforms to Run Python</h2>
+<p>You can run Python without installing anything:</p>
+<ul>
+<li>Google Colab (best for AI)</li>
+<li>Replit (easy for beginners)</li>
+<li>Programiz Online Compiler</li>
+<li>Jupyter Notebook (interactive coding)</li>
+</ul>
+</section>
+
+<section>
+<h2>5. Using Jupyter Notebook And Anaconda Navigator.</h2>
+<p>Jupyter Notebook is widely used for data science and AI. It allows you to write code in blocks and see output instantly.</p>
+  <p>Anaconda distribution is a software of that Jupyter notebook is a part it also contain many other developers tools.</p>
+<ul>
+<li>Install using pip At Terminal.</li>
+<li>Run: jupyter notebook</li>
+<li>Open in browser</li>
+</ul>
+  <a href="https://youtu.be/zsd_AxpfQGA?si=jtngrerkUnLLl9K_">Want A Details About Jupyter Notebook And How To Set Up It.Click Here.This Video Shows How to Install And Some Basic Use Of Jupyter Notebook And Anaconda Navigator</a>
+</section>
+
+<section>
+<h2>6. Running Python for Web Development</h2>
+<p>For web apps, Python is executed using frameworks:</p>
+<ul>
+<li>Django</li>
+<li>Flask</li>
+</ul>
+<p>These run Python on servers and handle user requests.</p>
+</section>
+
+<section>
+<h2>7. Running Python for AI & Data Science</h2>
+<ul>
+<li>Google Colab (cloud GPU)</li>
+  <li>Kaggle Notebook</li>
+<li>Jupyter Notebook</li>
+<li>VS Code with extensions</li>
+</ul>
+<p>These tools are optimized for machine learning workflows.</p>
+</section>
+
+<section>
+<h2>8. Common Mistakes Beginners Make</h2>
+<ul>
+<li>Not installing Python correctly</li>
+<li>Wrong file extensions</li>
+<li>Not adding Python to PATH</li>
+<li>Using outdated versions</li>
+  <li>Wasting Time To Find A IDE , IDE Is Not Important Main Thing Is to Start Coding</li>
+</ul>
+</section>
+
+<section>
+<h2>9. Best Recommendation (Simple)</h2>
+<p>If you are a beginner:</p>
+<ul>
+<li>Start with VS Code(Easy to use) </li>
+<li>Later use advanced tools like PyCharm</li>
+</ul>
+</section>
+  <h2>10.For Peoples Using Android For Some Reason.</h2>
+  <ul>
+    <li>Start with pydroid 3 very easy setup and offline support.
+  just install it from play store and start coding.</li>
+    <li>Using VS Code on browser but it does not let you to use terminal</li>
+    <a href="https://vscode.dev/">If you want to try it.Click here</a>
+    <li>Using Replit,Google Colab , Kaggle Notebook or any other browser based IDE but they needs network connection</li> 
+    <a href="https://replit.com/languages/python3">Replit</a> 
+<a href="https://colab.research.google.com/github/googlecolab/colabtools/blob/main/notebooks/Getting_started_with_google_colab_ai.ipynb">Google Colab</a>
+<a href="https://www.kaggle.com/code/">Kaggle Notebook,Click On Create New Notebook</a>
+
+
+      <li>Using Github codespaces,this give you a complete linux environment at which you can access terminal also but needs a Github account and network</li>
+    <a href="https://github.com/signup">If your are interested you can visit and signup in Github.</a>
+<li>Using VS Code on localhost it let you to open terminal,download extensions ,but it's set up is very complexed for beginners i do not recommend this.</li>
+<a href="https://www.codewithharry.com/blogpost/install-vs-code-in-android">But if you want to do this you can follow this article,i also followed that</a>
+  </ul>
+<section class="comment-box">
+<h2>Community Comments</h2>
+
+<input id="name" placeholder="Your Name">
+<textarea id="message" placeholder="Write your comment..."></textarea>
+<button onclick="submitComment()">Post Comment</button>
+
+<div id="comments"></div>
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = 'https://jczpnkzqrfiqyygcwghk.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_Tz_Wgh3JO-gTKpEePp8dNA_C9OAFnN5';
+
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+async function submitComment() {
+  const name = document.getElementById('name').value;
+  const message = document.getElementById('message').value;
+
+  if(!name || !message) return;
+
+  await supabaseClient.from('comments').insert([{ name, message }]);
+  loadComments();
+}
+
+async function loadComments() {
+  const { data } = await supabaseClient
+    .from('comments')
+    .select('*')
+    .order('id', { ascending: false });
+
+  const container = document.getElementById('comments');
+  container.innerHTML = '';
+
+  data.forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'comment';
+    div.innerHTML = `<b>${c.name}</b><br>${c.message}`;
+    container.appendChild(div);
+  });
+}
+
+loadComments();
+</script>
+
+</body>
+</html>
