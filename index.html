@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Kumar Mohanani | Official Website</title>
+  <style>
+    /* ===============================
+   MYSTERIOUS NAVY BLUE THEME
+================================ */
+:root {
+  --bg: radial-gradient(circle at top, #1a2a44 0%, #0b1628 45%, #050b16 100%);
+  --container-bg: linear-gradient(180deg, rgba(15,30,60,0.85), rgba(5,15,35,0.95));
+  --text: #e8ecf4;
+  --accent: #7fa8ff;
+  --button-bg: linear-gradient(135deg, #7fa8ff, #3b5fc9);
+  --button-text: #ffffff;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  --bg: radial-gradient(circle at top, #0a1426 0%, #020812 55%, #00040a 100%);
+  --container-bg: linear-gradient(180deg, rgba(5,15,30,0.9), rgba(0,5,15,0.95));
+  --text: #dce6ff;
+  --accent: #9dbbff;
+  --button-bg: linear-gradient(135deg, #9dbbff, #4c6edb);
+  --button-text: #06101f;
+}
+
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.6s ease;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===============================
+   PARTICLE / STAR DUST EFFECT
+================================ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 30% 70%, rgba(120,160,255,0.5), transparent),
+    radial-gradient(1px 1px at 80% 40%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 60% 90%, rgba(120,160,255,0.4), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.2), transparent);
+  animation: particles 18s linear infinite;
+  pointer-events: none;
+  z-index: -2;
+}
+
+@keyframes particles {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120px); }
+}
+
+/* ===============================
+   AMBIENT GLOW
+================================ */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(120,160,255,0.08), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(60,90,180,0.06), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(20,40,90,0.08), transparent 50%);
+  animation: ambientGlow 12s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ambientGlow {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.container {
+  max-width: 900px;
+  padding: 45px 55px;
+  background: var(--container-bg);
+  border-radius: 18px;
+  border: 1px solid rgba(120,160,255,0.15);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.85),
+    inset 0 0 40px rgba(120,160,255,0.05);
+  backdrop-filter: blur(14px);
+  text-align: center;
+  animation: fadeInUp 1.4s ease;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+h1 {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+  animation: slideDown 1s ease;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+/* ===============================
+   TYPING EFFECT
+================================ */
+.typing-text {
+  margin: 20px auto;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--accent);
+  width: 0;
+  animation: typing 3s steps(40) forwards, blink 0.8s infinite;
+}
+
+/* ===============================
+   TEXT
+================================ */
+p {
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+button, .link-btn {
+  padding: 12px 28px;
+  margin: 8px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover, .link-btn:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 14px rgba(120,160,255,0.6),
+    0 14px 35px rgba(0,0,0,0.7);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* ===============================
+   BUTTON GROUP
+================================ */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===============================
+   FLOATING EFFECT
+================================ */
+.float {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* ===============================
+   TOGGLE BUTTON
+================================ */
+.toggle-btn {
+  margin-top: 30px;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes floating {
+  50% { transform: translateY(-10px); }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1 class="main-title">Welcome to My Webpage</h1>
+    <h2 class="subtitle">I am Aditya Kumar Mohanani</h2>
+
+    <div class="typing-text">
+      Student • Learner • Future Scientist
+    </div>
+
+    <section>
+      <h2>About Myself</h2>
+      <p>
+        I am Aditya Kumar Mohanani and this is my first webpage.
+        I have started coding recently. I live in Jawahar Navodaya
+        Vidyalaya campus, Bohani, District Narsinghpur.
+        My hobbies include coin collecting and playing cricket.
+        I have also recently started playing table tennis.
+        Currently, I am studying in Class 8-B at PM SHRI Jawahar
+        Navodaya Vidyalaya, Bohani.
+        I like to travel and I will update this page from time to time.
+      </p>
+    </section>
+
+    <section>
+      <h2>My Academics</h2>
+
+      <h3>Class 7</h3>
+      <p>
+        VVM State Level Camp (MP Region 2)<br>
+        PSY National Exam
+      </p>
+
+      <h3>Class 8</h3>
+      <p>
+        VVM Level 1 & Level 2 (Selected for State Level Camp 2025)<br>
+        IAPT – NSEJS (Result awaited)<br>
+        Green Olympiad 2025<br>
+        KAMP – NASTA 2025
+      </p>
+
+      <p>
+        I am also a school and class topper.
+        In Class 7, I scored 97.83% and currently I am the class topper.
+      </p>
+    </section>
+
+    <section>
+      <h2>My YouTube Channel</h2>
+      <p>
+        I have a YouTube channel named <strong>Aditya Mohanani</strong>
+        where I upload Mathematics videos, my favourite subject.
+      </p>
+
+      <a class="link-btn" href="https://youtube.com/@adityamohanani9769">
+        Visit My YouTube Channel
+      </a>
+    </section>
+
+
+    <section>
+      <h2>My Webpages To Read Abou Python</h2>
+      <div class="button-group">
+        <a href="pythonguide.html"> Python Programming: A Comprehensive Guide</a>
+        <a href="wheretolearnpy.html"> How And From Where To Learn Python </a>
+        <a href="exepycode.html>How And Where To Execute Python Code?</a>
+
+        
+      </div>
+    </section>
+    <h4>TOGGLE BUTTON FOR CHANGE WEBPAGE IN DARK THEME</h4>
+    
+
+    <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">
+      Toggle Dark Mode
+    </button>
+
+  </div>
+
+</body>
+</html>
