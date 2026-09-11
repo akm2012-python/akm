@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akm2012.netlify.app/sitemap.xml
