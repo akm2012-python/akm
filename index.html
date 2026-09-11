@@ -1,362 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aditya Kumar Mohanani | Official Website</title>
-  <style>
-    /* ===============================
-   MYSTERIOUS NAVY BLUE THEME
-================================ */
-:root {
-  --bg: radial-gradient(circle at top, #1a2a44 0%, #0b1628 45%, #050b16 100%);
-  --container-bg: linear-gradient(180deg, rgba(15,30,60,0.85), rgba(5,15,35,0.95));
-  --text: #e8ecf4;
-  --accent: #7fa8ff;
-  --button-bg: linear-gradient(135deg, #7fa8ff, #3b5fc9);
-  --button-text: #ffffff;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKM | Aditya Kumar Mohanani</title>
+
+<meta name="description"
+content="Digital portfolio of Aditya Kumar Mohanani — student, programmer, STEM enthusiast and aspiring AI researcher.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ===== Dark Mode ===== */
-body.dark-mode {
-  --bg: radial-gradient(circle at top, #0a1426 0%, #020812 55%, #00040a 100%);
-  --container-bg: linear-gradient(180deg, rgba(5,15,30,0.9), rgba(0,5,15,0.95));
-  --text: #dce6ff;
-  --accent: #9dbbff;
-  --button-bg: linear-gradient(135deg, #9dbbff, #4c6edb);
-  --button-text: #06101f;
+html{
+    scroll-behavior:smooth;
 }
 
-/* ===============================
-   GLOBAL RESET
-================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+body{
+    font-family:Inter, sans-serif;
+    background:#03050b;
+    color:#f4f7ff;
+    overflow-x:hidden;
 }
 
-body {
-  min-height: 100vh;
-  background: var(--bg);
-  color: var(--text);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background 0.6s ease;
-  overflow-x: hidden;
-  position: relative;
+a{
+    color:inherit;
+    text-decoration:none;
 }
 
-/* ===============================
-   PARTICLE / STAR DUST EFFECT
-================================ */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 30% 70%, rgba(120,160,255,0.5), transparent),
-    radial-gradient(1px 1px at 80% 40%, rgba(255,255,255,0.3), transparent),
-    radial-gradient(1px 1px at 60% 90%, rgba(120,160,255,0.4), transparent),
-    radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.2), transparent);
-  animation: particles 18s linear infinite;
-  pointer-events: none;
-  z-index: -2;
+button{
+    font:inherit;
 }
 
-@keyframes particles {
-  from { transform: translateY(0); }
-  to { transform: translateY(-120px); }
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0,220,255,.12), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(150,70,255,.12), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(255,0,150,.08), transparent 30%);
+
+    pointer-events:none;
 }
 
-/* ===============================
-   AMBIENT GLOW
-================================ */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(120,160,255,0.08), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(60,90,180,0.06), transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(20,40,90,0.08), transparent 50%);
-  animation: ambientGlow 12s ease-in-out infinite alternate;
-  pointer-events: none;
-  z-index: -1;
+.grid{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    opacity:.16;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+
+    background-size:55px 55px;
+
+    mask-image:linear-gradient(to bottom,black,transparent);
 }
 
-@keyframes ambientGlow {
-  from { opacity: 0.6; }
-  to { opacity: 1; }
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
 }
 
-/* ===============================
-   MAIN CONTAINER
-================================ */
-.container {
-  max-width: 900px;
-  padding: 45px 55px;
-  background: var(--container-bg);
-  border-radius: 18px;
-  border: 1px solid rgba(120,160,255,0.15);
-  box-shadow:
-    0 30px 70px rgba(0,0,0,0.85),
-    inset 0 0 40px rgba(120,160,255,0.05);
-  backdrop-filter: blur(14px);
-  text-align: center;
-  animation: fadeInUp 1.4s ease;
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:fixed;
+
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:min(1100px,calc(100% - 30px));
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:12px 18px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    background:rgba(5,8,18,.65);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:18px;
+
+    z-index:1000;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.3);
 }
 
-/* ===============================
-   HEADINGS
-================================ */
-h1 {
-  font-size: 2.8rem;
-  color: var(--accent);
-  margin-bottom: 10px;
-  animation: slideDown 1s ease;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-family:"Space Grotesk";
+    font-weight:700;
+    letter-spacing:-.5px;
 }
 
-h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: var(--accent);
+.logo-box{
+    width:34px;
+    height:34px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#00e5ff,#8d5cff);
+
+    color:#02030a;
+
+    font-weight:800;
+
+    box-shadow:0 0 25px rgba(0,220,255,.3);
 }
 
-h3 {
-  margin-top: 15px;
+.nav-links{
+    display:flex;
+    gap:22px;
+
+    font-size:13px;
+
+    color:#9ba5ba;
 }
 
-/* ===============================
-   TYPING EFFECT
-================================ */
-.typing-text {
-  margin: 20px auto;
-  font-size: 1.1rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid var(--accent);
-  width: 0;
-  animation: typing 3s steps(40) forwards, blink 0.8s infinite;
+.nav-links a{
+    transition:.25s;
 }
 
-/* ===============================
-   TEXT
-================================ */
-p {
-  line-height: 1.7;
-  opacity: 0.95;
-  margin-bottom: 10px;
+.nav-links a:hover{
+    color:white;
 }
 
-/* ===============================
-   BUTTONS
-================================ */
-button, .link-btn {
-  padding: 12px 28px;
-  margin: 8px;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  background: var(--button-bg);
-  color: var(--button-text);
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
+@media(max-width:700px){
+
+    .nav-links{
+        display:none;
+    }
+
 }
 
-button:hover, .link-btn:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 0 14px rgba(120,160,255,0.6),
-    0 14px 35px rgba(0,0,0,0.7);
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:
+        150px 30px
+        80px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:50px;
 }
 
-button:active {
-  transform: scale(0.95);
+@media(max-width:850px){
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .hero-visual{
+        order:-1;
+    }
+
 }
 
-/* ===============================
-   BUTTON GROUP
-================================ */
-.button-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.eyebrow{
+
+    font-family:"JetBrains Mono";
+
+    color:#61eaff;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+    text-transform:uppercase;
+
 }
 
-/* ===============================
-   FLOATING EFFECT
-================================ */
-.float {
-  animation: floating 4s ease-in-out infinite;
+.hero h1{
+
+    font-family:"Space Grotesk";
+
+    font-size:clamp(45px,7vw,88px);
+
+    line-height:.95;
+
+    letter-spacing:-5px;
+
+    margin-bottom:25px;
+
 }
 
-/* ===============================
-   TOGGLE BUTTON
-================================ */
-.toggle-btn {
-  margin-top: 30px;
+.hero h1 span{
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #67e9ff,
+            #a178ff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
 }
 
-/* ===============================
-   ANIMATIONS
-================================ */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
+.hero-description{
+
+    max-width:650px;
+
+    color:#9ca7bc;
+
+    font-size:17px;
+
+    line-height:1.8;
+
 }
 
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-40px); }
-  to { opacity: 1; transform: translateY(0); }
+.hero-actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
 }
 
-@keyframes typing {
-  to { width: 100%; }
+.btn{
+
+    padding:13px 19px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.3s;
+
+    font-weight:600;
+
+    font-size:14px;
+
 }
 
-@keyframes blink {
-  50% { border-color: transparent; }
+.btn-primary{
+
+    background:#fff;
+
+    color:#05070d;
+
 }
 
-@keyframes floating {
-  50% { transform: translateY(-10px); }
+.btn-secondary{
+
+    background:rgba(255,255,255,.04);
+
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .container {
-    padding: 25px;
-  }
-  h1 {
-    font-size: 2.2rem;
-  }
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.4);
+
 }
 
-    .link-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 80px; /* spacing between links */
+
+/* =========================================================
+   3D CORE
+========================================================= */
+
+.hero-visual{
+
+    display:grid;
+
+    place-items:center;
+
+    perspective:1000px;
+
 }
-  </style>
-</head>
-<body>
 
-  <div class="container">
+.core{
 
-    <h1 class="main-title">Welcome to My Webpage</h1>
-    <h2 class="subtitle">I am Aditya Kumar Mohanani</h2>
+    width:370px;
 
-    <div class="typing-text">
-      Student • Learner • Future Scientist
-    </div>
+    height:370px;
 
-    <section>
-      <h2>About Myself</h2>
-      <p>
-        I am Aditya Kumar Mohanani and this is my first webpage.
-        I have started coding last year. I live in Jawahar Navodaya
-        Vidyalaya campus, loni, District Burhanpur.
-        My hobbies include coin collecting and playing cricket.
-        I have also recently started playing table tennis.
-        Currently, I am studying in Class 9-A at PM SHRI Jawahar
-        Navodaya Vidyalaya, Burhanpur.
-        I like to travel and I will update this page from time to time.
-      </p>
-    </section>
+    max-width:80vw;
 
-    <section>
-      <h2>My Academics</h2>
+    max-height:80vw;
 
-      <h3>Class 7</h3>
-      <p>
-        VVM State Level Camp (MP Region 2)<br>
-        PSY National Exam
-      </p>
+    position:relative;
 
-      <h3>Class 8</h3>
-      <p>
-        VVM Level 1 & Level 2 (Selected for State Level Camp 2025)<br>
-       <br>
-        Green Olympiad 2025 Gold medal<br>
-        
-      </p>
+    transform-style:preserve-3d;
 
-      <p>
-        I am also a school and class topper.
-        In Class 7, I scored 97.83% and currently I am the class topper.
-      </p>
+    transition:transform .2s ease-out;
 
-    <h3>Class 9</h3>
-      <p>
-        Cluster level science exhibition participation
-        Regional Level Table Tennis participation
-        Gold Medal in MP tourism quiz 2026
-      </p>
+}
 
-    </section>
+.core-center{
 
-    <section>
-      <h2>My YouTube Channel</h2>
-      <p>
-        I have a YouTube channel named <strong>AKM stem lab</strong>
-        where I upload ai ,ml videos, my favourite topic.
-      </p>
+    position:absolute;
 
-      <a class="link-btn" href="https://youtube.com/@akmstemlab">
-        Visit My YouTube Channel
-      </a>
-    </section>
+    width:145px;
+    height:145px;
 
+    top:50%;
+    left:50%;
 
-  <section>
-  <h2>My Webpages To Read About Python</h2>
+    transform:
+        translate(-50%,-50%)
+        translateZ(50px);
 
-  <div class="button-group">
-    <ul class="link-list"> 
-      <li>
-        <a class="link-btn" href="pythonguide.html">
-          Python Programming: A Comprehensive Guide
-        </a>
-      </li>
+    border-radius:50%;
 
-      <li>
-        <a class="link-btn" href="wheretolearnpy.html">
-          How And From Where To Learn Python
-        </a>
-      </li>
+    display:grid;
+    place-items:center;
 
-      <li>
-        <a class="link-btn" href="exepycode.html">
-          How And Where To Execute Python Code?
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
- <ul class="link-list"> 
-      <li>     </li>
-    </ul>
+    font-family:"Space Grotesk";
 
-    
-    <h4>TOGGLE BUTTON FOR CHANGE WEBPAGE IN DARK THEME</h4>
-    
+    font-size:42px;
 
-    <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">
-      Toggle Dark Mode
-    </button>
+    font-weight:700;
 
-  </div>
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #ffffff,
+            #7feeff 12%,
+            #613cff 50%,
+            #09001b 75%
+        );
 
-</body>
-</html>
+    color:white;
+
+    box-shadow:
+        0 0 35px #5deaff,
+        0 0 90px rgba(106,70,255,.5),
+        inset 0 0 40px rgba(255,255,255,.4);
+
+    animation:pulse 4s infinite ease-in-out;
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+        transform:
+            translate(-50%,-50%)
+            translateZ(50px)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            translate(-50%,-50%)
+            translateZ(50px)
+            scale(1.07);
+    }
+
+}
+
+.orbit{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    border:1px solid rgba(100,230,255,.35);
+
+    border-radius:50%;
+
+    transform-style:preserve-3d;
+
+}
+
+.orbit1{
+
+    width:260px;
+    height:110px;
+
+    transform:
+        translate(-50%,-50%)
+        rotateX(65deg)
+        rotateZ(15deg);
+
+    animation:orbit1 9s linear infinite;
+
+}
+
+.orbit2{
+
+    width:320px;
+    height:140px;
+
+    transform:
+        translate(-50%,-50%)
+        rotateX(70deg)
+        rotateY(25deg);
+
+    animation:orbit2 13s linear infinite reverse;
+
+}
+
+.orbit3{
+
+    width:350px;
+    height:350px;
+
+    border-color:rgba(160,100,255,.25);
+
+    transform:
+        translate(-50%,-50%)
+        rotateX(68deg)
+        rotateY(25deg);
+
+    animation:orbit3 18s linear infinite;
+
+}
+
+@keyframes orbit1{
+
+    from{
+        transform:
+        translate(-50%,-50%)
+        rotateX(65deg)
+        rotateZ(0);
+    }
+
+    to{
+        transform:
+        translate(-50%,-50%)
+        rotateX(65deg)
+        rotateZ(360deg);
+    }
+
+}
+
+@keyframes orbit2{
+
+    from{
+        transform:
+        translate(-50%,-50%)
+        rotateX(70deg)
+        rotateY(25deg)
+        rotateZ(0);
+    }
+
+    to{
+        transform:
+        translate(-50%,-50%)
+        rotateX(70deg)
+        rotateY(25deg)
+        rotateZ(360deg);
+    }
+
+}
+
+@keyframes orbit3{
+
+    from{
+        transform:
+        translate(-50%,-50%)
+        rotateX(68deg)
+        rotateY(25deg)
+        rotateZ(0);
+    }
+
+    to{
+        transform:
+        translate(-50%,-50%)
+        rotateX(68deg)
+        rotateY(25deg)
+        rotateZ(360deg);
+    }
+
+}
+
+.node{
+
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#70edff;
+
+    box-shadow:0 0 20px #70edff;
+
+}
+
+.node:nth-child(1){
+    top:10%;
+    left:20%;
+}
+
+.node:nth-child(2){
+    right:8%;
+    top:45%;
+    background:#
