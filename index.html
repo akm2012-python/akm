@@ -1,573 +1,2300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- =========================================================
+       BASIC SEO
+  ========================================================== -->
+  <meta charset="UTF-8">
 
-<title>AKM | Aditya Kumar Mohanani</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<meta name="description"
-content="Digital portfolio of Aditya Kumar Mohanani — student, programmer, STEM enthusiast and aspiring AI researcher.">
+  <title>
+    Aditya Kumar Mohanani | AI, ML & STEM Portfolio
+  </title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="description"
+    content="Official portfolio of Aditya Kumar Mohanani — Class 9 student exploring Python, artificial intelligence, machine learning, STEM, efficient AI and emerging computing."
+  >
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta
+    name="keywords"
+    content="Aditya Kumar Mohanani, Aditya Mohanani, AKM, AI student, machine learning student, Python student, STEM, artificial intelligence, efficient AI, AI research, India"
+  >
 
-<style>
+  <meta name="author" content="Aditya Kumar Mohanani">
 
-/* =========================================================
-   RESET
-========================================================= */
+  <meta name="robots" content="index, follow">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  <link
+    rel="canonical"
+    href="https://akm2012.netlify.app/"
+  >
 
-html{
-    scroll-behavior:smooth;
-}
+  <!-- =========================================================
+       OPEN GRAPH
+  ========================================================== -->
 
-body{
-    font-family:Inter, sans-serif;
-    background:#03050b;
-    color:#f4f7ff;
-    overflow-x:hidden;
-}
+  <meta
+    property="og:type"
+    content="website"
+  >
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+  <meta
+    property="og:title"
+    content="Aditya Kumar Mohanani | AI, ML & STEM Portfolio"
+  >
 
-button{
-    font:inherit;
-}
+  <meta
+    property="og:description"
+    content="AI, machine learning, Python, STEM and emerging computing portfolio."
+  >
 
+  <meta
+    property="og:url"
+    content="https://akm2012.netlify.app/"
+  >
 
-/* =========================================================
-   BACKGROUND
-========================================================= */
+  <meta
+    property="og:site_name"
+    content="AKM STEM Lab"
+  >
 
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-3;
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
 
-    background:
-        radial-gradient(circle at 15% 20%, rgba(0,220,255,.12), transparent 30%),
-        radial-gradient(circle at 85% 30%, rgba(150,70,255,.12), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(255,0,150,.08), transparent 30%);
+  <meta
+    name="twitter:title"
+    content="Aditya Kumar Mohanani | AI, ML & STEM Portfolio"
+  >
 
-    pointer-events:none;
-}
+  <meta
+    name="twitter:description"
+    content="Exploring AI, ML, Python, STEM and efficient computing."
+  >
 
-.grid{
-    position:fixed;
-    inset:0;
-    z-index:-2;
-    opacity:.16;
+  <!-- =========================================================
+       THEME
+  ========================================================== -->
 
-    background-image:
-        linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  <meta name="theme-color" content="#05070d">
 
-    background-size:55px 55px;
+  <!-- =========================================================
+       STRUCTURED DATA
+  ========================================================== -->
 
-    mask-image:linear-gradient(to bottom,black,transparent);
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Aditya Kumar Mohanani - AI, ML & STEM Portfolio",
+    "url": "https://akm2012.netlify.app/",
+    "description": "Portfolio and digital resume of Aditya Kumar Mohanani.",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Aditya Kumar Mohanani",
+      "alternateName": [
+        "Aditya Mohanani",
+        "AKM"
+      ],
+      "email": "mailto:akmstemlab@gmail.com",
+      "url": "https://akm2012.netlify.app/",
+      "sameAs": [
+        "https://github.com/akm2012-python",
+        "https://youtube.com/@akmstemlab"
+      ],
+      "knowsAbout": [
+        "Python",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Deep Learning",
+        "Generative AI",
+        "NumPy",
+        "Pandas",
+        "Scikit-learn",
+        "Efficient AI",
+        "Continual Learning",
+        "Reservoir Computing",
+        "State Space Models",
+        "Neuromorphic Computing",
+        "STEM"
+      ]
+    }
+  }
+  </script>
 
+  <!-- =========================================================
+       FONTS
+  ========================================================== -->
 
-/* =========================================================
-   PARTICLES
-========================================================= */
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-#particles{
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    pointer-events:none;
-}
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-/* =========================================================
-   NAVBAR
-========================================================= */
+  <!-- =========================================================
+       THREE.JS
+  ========================================================== -->
 
-.navbar{
-    position:fixed;
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js"
+    }
+  }
+  </script>
 
-    top:18px;
-    left:50%;
-    transform:translateX(-50%);
+  <!-- =========================================================
+       CSS
+  ========================================================== -->
 
-    width:min(1100px,calc(100% - 30px));
+  <style>
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    /* ========================================================
+       RESET
+    ======================================================== */
 
-    padding:12px 18px;
-
-    border:1px solid rgba(255,255,255,.09);
-
-    background:rgba(5,8,18,.65);
-
-    backdrop-filter:blur(20px);
-
-    border-radius:18px;
-
-    z-index:1000;
-
-    box-shadow:
-        0 15px 50px rgba(0,0,0,.3);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    font-family:"Space Grotesk";
-    font-weight:700;
-    letter-spacing:-.5px;
-}
-
-.logo-box{
-    width:34px;
-    height:34px;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:10px;
-
-    background:linear-gradient(135deg,#00e5ff,#8d5cff);
-
-    color:#02030a;
-
-    font-weight:800;
-
-    box-shadow:0 0 25px rgba(0,220,255,.3);
-}
-
-.nav-links{
-    display:flex;
-    gap:22px;
-
-    font-size:13px;
-
-    color:#9ba5ba;
-}
-
-.nav-links a{
-    transition:.25s;
-}
-
-.nav-links a:hover{
-    color:white;
-}
-
-@media(max-width:700px){
-
-    .nav-links{
-        display:none;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-    min-height:100vh;
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:
-        150px 30px
-        80px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    align-items:center;
-
-    gap:50px;
-}
-
-@media(max-width:850px){
-
-    .hero{
-        grid-template-columns:1fr;
-        text-align:center;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .hero-actions{
-        justify-content:center;
-    }
-
-    .hero-visual{
-        order:-1;
-    }
-
-}
-
-
-/* =========================================================
-   HERO TEXT
-========================================================= */
-
-.eyebrow{
-
-    font-family:"JetBrains Mono";
-
-    color:#61eaff;
-
-    font-size:12px;
-
-    letter-spacing:2px;
-
-    margin-bottom:20px;
-
-    text-transform:uppercase;
-
-}
-
-.hero h1{
-
-    font-family:"Space Grotesk";
-
-    font-size:clamp(45px,7vw,88px);
-
-    line-height:.95;
-
-    letter-spacing:-5px;
-
-    margin-bottom:25px;
-
-}
-
-.hero h1 span{
-
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #67e9ff,
-            #a178ff
-        );
-
-    -webkit-background-clip:text;
-
-    color:transparent;
-
-}
-
-.hero-description{
-
-    max-width:650px;
-
-    color:#9ca7bc;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-}
-
-.hero-actions{
-
-    display:flex;
-
-    gap:12px;
-
-    margin-top:30px;
-
-    flex-wrap:wrap;
-
-}
-
-.btn{
-
-    padding:13px 19px;
-
-    border-radius:12px;
-
-    border:1px solid rgba(255,255,255,.1);
-
-    transition:.3s;
-
-    font-weight:600;
-
-    font-size:14px;
-
-}
-
-.btn-primary{
-
-    background:#fff;
-
-    color:#05070d;
-
-}
-
-.btn-secondary{
-
-    background:rgba(255,255,255,.04);
-
-}
-
-.btn:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:0 10px 35px rgba(0,0,0,.4);
-
-}
-
-
-/* =========================================================
-   3D CORE
-========================================================= */
-
-.hero-visual{
-
-    display:grid;
-
-    place-items:center;
-
-    perspective:1000px;
-
-}
-
-.core{
-
-    width:370px;
-
-    height:370px;
-
-    max-width:80vw;
-
-    max-height:80vw;
-
-    position:relative;
-
-    transform-style:preserve-3d;
-
-    transition:transform .2s ease-out;
-
-}
-
-.core-center{
-
-    position:absolute;
-
-    width:145px;
-    height:145px;
-
-    top:50%;
-    left:50%;
-
-    transform:
-        translate(-50%,-50%)
-        translateZ(50px);
-
-    border-radius:50%;
-
-    display:grid;
-    place-items:center;
-
-    font-family:"Space Grotesk";
-
-    font-size:42px;
-
-    font-weight:700;
-
-    background:
+    body {
+      background:
         radial-gradient(
-            circle at 30% 25%,
-            #ffffff,
-            #7feeff 12%,
-            #613cff 50%,
-            #09001b 75%
+          circle at 20% 10%,
+          rgba(70, 90, 255, 0.12),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(0, 220, 255, 0.08),
+          transparent 30%
+        ),
+        #05070d;
+
+      color: #f4f7ff;
+
+      font-family: "Inter", sans-serif;
+
+      overflow-x: hidden;
+
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* ========================================================
+       BACKGROUND
+    ======================================================== */
+
+    #particles {
+      position: fixed;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      z-index: -3;
+
+      pointer-events: none;
+    }
+
+    .grid {
+      position: fixed;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
         );
 
-    color:white;
+      background-size: 60px 60px;
 
-    box-shadow:
-        0 0 35px #5deaff,
-        0 0 90px rgba(106,70,255,.5),
-        inset 0 0 40px rgba(255,255,255,.4);
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 90%
+        );
 
-    animation:pulse 4s infinite ease-in-out;
+      pointer-events: none;
 
-}
-
-@keyframes pulse{
-
-    0%,100%{
-        transform:
-            translate(-50%,-50%)
-            translateZ(50px)
-            scale(1);
+      z-index: -2;
     }
 
-    50%{
-        transform:
-            translate(-50%,-50%)
-            translateZ(50px)
-            scale(1.07);
+    /* ========================================================
+       NAVBAR
+    ======================================================== */
+
+    nav {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 100;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 18px 6vw;
+
+      backdrop-filter: blur(18px);
+
+      background:
+        rgba(5, 7, 13, 0.68);
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.07);
     }
 
-}
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
 
-.orbit{
+      font-size: 1.25rem;
 
-    position:absolute;
+      font-weight: 700;
 
-    top:50%;
-    left:50%;
-
-    border:1px solid rgba(100,230,255,.35);
-
-    border-radius:50%;
-
-    transform-style:preserve-3d;
-
-}
-
-.orbit1{
-
-    width:260px;
-    height:110px;
-
-    transform:
-        translate(-50%,-50%)
-        rotateX(65deg)
-        rotateZ(15deg);
-
-    animation:orbit1 9s linear infinite;
-
-}
-
-.orbit2{
-
-    width:320px;
-    height:140px;
-
-    transform:
-        translate(-50%,-50%)
-        rotateX(70deg)
-        rotateY(25deg);
-
-    animation:orbit2 13s linear infinite reverse;
-
-}
-
-.orbit3{
-
-    width:350px;
-    height:350px;
-
-    border-color:rgba(160,100,255,.25);
-
-    transform:
-        translate(-50%,-50%)
-        rotateX(68deg)
-        rotateY(25deg);
-
-    animation:orbit3 18s linear infinite;
-
-}
-
-@keyframes orbit1{
-
-    from{
-        transform:
-        translate(-50%,-50%)
-        rotateX(65deg)
-        rotateZ(0);
+      letter-spacing: -0.04em;
     }
 
-    to{
-        transform:
-        translate(-50%,-50%)
-        rotateX(65deg)
-        rotateZ(360deg);
+    .logo span {
+      opacity: 0.45;
     }
 
-}
+    .nav-links {
+      display: flex;
 
-@keyframes orbit2{
+      gap: 24px;
 
-    from{
-        transform:
-        translate(-50%,-50%)
-        rotateX(70deg)
-        rotateY(25deg)
-        rotateZ(0);
+      font-size: 0.9rem;
+
+      color: #aeb7ca;
     }
 
-    to{
-        transform:
-        translate(-50%,-50%)
-        rotateX(70deg)
-        rotateY(25deg)
-        rotateZ(360deg);
+    .nav-links a {
+      transition: 0.25s;
     }
 
-}
-
-@keyframes orbit3{
-
-    from{
-        transform:
-        translate(-50%,-50%)
-        rotateX(68deg)
-        rotateY(25deg)
-        rotateZ(0);
+    .nav-links a:hover {
+      color: white;
     }
 
-    to{
-        transform:
-        translate(-50%,-50%)
-        rotateX(68deg)
-        rotateY(25deg)
-        rotateZ(360deg);
+    /* ========================================================
+       GENERAL
+    ======================================================== */
+
+    main {
+      width: min(1200px, 90%);
+
+      margin: auto;
     }
 
-}
+    section {
+      padding: 110px 0;
+    }
 
-.node{
+    .eyebrow {
+      color: #8d9cff;
 
-    position:absolute;
+      font-size: 0.78rem;
 
-    width:10px;
-    height:10px;
+      font-weight: 700;
 
-    border-radius:50%;
+      letter-spacing: 0.18em;
 
-    background:#70edff;
+      text-transform: uppercase;
 
-    box-shadow:0 0 20px #70edff;
+      margin-bottom: 14px;
+    }
 
-}
+    h1,
+    h2,
+    h3 {
+      font-family: "Space Grotesk", sans-serif;
+    }
 
-.node:nth-child(1){
-    top:10%;
-    left:20%;
-}
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
 
-.node:nth-child(2){
-    right:8%;
-    top:45%;
-    background:#
+      line-height: 1.05;
+
+      margin-bottom: 22px;
+
+      letter-spacing: -0.05em;
+    }
+
+    .section-description {
+      max-width: 680px;
+
+      color: #9da7ba;
+
+      font-size: 1.02rem;
+    }
+
+    /* ========================================================
+       HERO
+    ======================================================== */
+
+    .hero {
+      min-height: 100vh;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(320px, 0.9fr);
+
+      align-items: center;
+
+      gap: 50px;
+
+      padding-top: 130px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 6.5rem);
+
+      line-height: 0.95;
+
+      letter-spacing: -0.065em;
+
+      max-width: 800px;
+    }
+
+    .gradient-text {
+      background:
+        linear-gradient(
+          100deg,
+          #ffffff,
+          #9baaff 40%,
+          #70e9ff
+        );
+
+      -webkit-background-clip: text;
+
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      margin-top: 28px;
+
+      max-width: 700px;
+
+      color: #aab4c8;
+
+      font-size: 1.1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 12px 20px;
+
+      border-radius: 12px;
+
+      border: 1px solid rgba(255,255,255,0.1);
+
+      background:
+        rgba(255,255,255,0.05);
+
+      transition: 0.25s;
+
+      font-weight: 600;
+
+      font-size: 0.92rem;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+
+      background:
+        rgba(255,255,255,0.1);
+
+      border-color:
+        rgba(255,255,255,0.22);
+    }
+
+    .button.primary {
+      background: white;
+
+      color: #05070d;
+    }
+
+    .button.primary:hover {
+      background: #dce2ff;
+    }
+
+    /* ========================================================
+       MASCOT
+    ======================================================== */
+
+    #mascot-container {
+      width: 100%;
+
+      height: 520px;
+
+      position: relative;
+
+      border-radius: 30px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(100,120,255,0.13),
+          transparent 60%
+        );
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      overflow: hidden;
+    }
+
+    #mascot-container canvas {
+      width: 100% !important;
+
+      height: 100% !important;
+
+      display: block;
+    }
+
+    .mascot-label {
+      position: absolute;
+
+      bottom: 20px;
+
+      left: 20px;
+
+      padding: 8px 12px;
+
+      border-radius: 999px;
+
+      background:
+        rgba(0,0,0,0.45);
+
+      border:
+        1px solid rgba(255,255,255,0.1);
+
+      backdrop-filter: blur(10px);
+
+      font-size: 0.75rem;
+
+      color: #aab4c8;
+    }
+
+    /* ========================================================
+       CARDS
+    ======================================================== */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+
+      margin-top: 45px;
+    }
+
+    .card {
+      padding: 26px;
+
+      border-radius: 22px;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.06),
+          rgba(255,255,255,0.025)
+        );
+
+      backdrop-filter: blur(14px);
+
+      transition:
+        transform 0.3s,
+        border-color 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(150,170,255,0.28);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #929db2;
+
+      font-size: 0.94rem;
+    }
+
+    /* ========================================================
+       TAGS
+    ======================================================== */
+
+    .tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 6px 10px;
+
+      border-radius: 999px;
+
+      background:
+        rgba(255,255,255,0.055);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      color: #bbc5d8;
+
+      font-size: 0.75rem;
+    }
+
+    /* ========================================================
+       TIMELINE
+    ======================================================== */
+
+    .timeline {
+      margin-top: 45px;
+
+      border-left:
+        1px solid rgba(255,255,255,0.12);
+
+      padding-left: 30px;
+    }
+
+    .timeline-item {
+      position: relative;
+
+      margin-bottom: 40px;
+    }
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+
+      background: #91a2ff;
+
+      left: -36px;
+
+      top: 8px;
+
+      box-shadow:
+        0 0 20px rgba(145,162,255,0.7);
+    }
+
+    .timeline-year {
+      color: #8292ff;
+
+      font-size: 0.8rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.08em;
+    }
+
+    .timeline h3 {
+      margin-top: 5px;
+
+      margin-bottom: 4px;
+    }
+
+    .timeline p {
+      color: #909bae;
+
+      max-width: 700px;
+    }
+
+    /* ========================================================
+       ACHIEVEMENTS
+    ======================================================== */
+
+    .achievement-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 15px;
+
+      margin-top: 40px;
+    }
+
+    .achievement {
+      padding: 20px;
+
+      border-radius: 17px;
+
+      border:
+        1px solid rgba(255,255,255,0.07);
+
+      background:
+        rgba(255,255,255,0.035);
+    }
+
+    .achievement strong {
+      display: block;
+
+      margin-bottom: 4px;
+    }
+
+    .achievement span {
+      color: #8f99ad;
+
+      font-size: 0.88rem;
+    }
+
+    /* ========================================================
+       CONTACT
+    ======================================================== */
+
+    .contact-box {
+      padding: 50px;
+
+      border-radius: 28px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(105,125,255,0.14),
+          rgba(255,255,255,0.025)
+        );
+
+      border:
+        1px solid rgba(255,255,255,0.09);
+    }
+
+    .contact-box p {
+      color: #9aa4b7;
+
+      max-width: 650px;
+
+      margin: 0 auto;
+    }
+
+    .contact-links {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 25px;
+    }
+
+    /* ========================================================
+       FOOTER
+    ======================================================== */
+
+    footer {
+      width: min(1200px, 90%);
+
+      margin: auto;
+
+      padding: 30px 0 45px;
+
+      border-top:
+        1px solid rgba(255,255,255,0.07);
+
+      color: #6f788b;
+
+      font-size: 0.8rem;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+    /* ========================================================
+       MOBILE
+    ======================================================== */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 120px;
+      }
+
+      #mascot-container {
+        height: 400px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .achievement-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        animation-duration: 0.001ms !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Background -->
+  <canvas id="particles"></canvas>
+
+  <div class="grid"></div>
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================== -->
+
+  <nav>
+
+    <a href="#top" class="logo">
+      AKM<span>.STEM</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </nav>
+
+  <main id="top">
+
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+
+    <section class="hero">
+
+      <div>
+
+        <div class="eyebrow">
+          AI • ML • STEM • Research
+        </div>
+
+        <h1>
+          Building ideas
+          <span class="gradient-text">
+            before they're obvious.
+          </span>
+        </h1>
+
+        <p class="hero-subtitle">
+          I'm Aditya Kumar Mohanani, a Class 9 student exploring
+          Python, artificial intelligence, machine learning, STEM
+          and emerging computing systems.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            href="#projects"
+            class="button primary"
+          >
+            Explore my work
+          </a>
+
+          <a
+            href="https://github.com/akm2012-python"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            GitHub ↗
+          </a>
+
+          <a
+            href="https://youtube.com/@akmstemlab"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            AKM STEM Lab ↗
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- 3D MASCOT -->
+
+      <div id="mascot-container">
+
+        <div class="mascot-label">
+          Interactive 3D AI Lab Mascot • Move your cursor
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         ABOUT
+    ======================================================== -->
+
+    <section id="about">
+
+      <div class="eyebrow">
+        01 / About
+      </div>
+
+      <h2>
+        Student. Builder. Research explorer.
+      </h2>
+
+      <p class="section-description">
+        I am building my foundation in programming, mathematics
+        and artificial intelligence while experimenting with
+        real projects and emerging areas of computing.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <h3>Build</h3>
+
+          <p>
+            I prefer turning ideas into working prototypes,
+            experiments and software rather than stopping at
+            theoretical concepts.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>Understand</h3>
+
+          <p>
+            My goal is to understand the mathematics, logic and
+            architecture behind AI—not just call libraries.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>Explore</h3>
+
+          <p>
+            I am particularly interested in efficient AI,
+            alternative neural architectures, continual learning
+            and emerging computing systems.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         TOOLKIT
+    ======================================================== -->
+
+    <section id="toolkit">
+
+      <div class="eyebrow">
+        02 / Toolkit
+      </div>
+
+      <h2>
+        Current technical direction
+      </h2>
+
+      <p class="section-description">
+        A growing toolkit spanning programming, data science,
+        machine learning and experimental AI architectures.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <h3>Programming</h3>
+
+          <div class="tags">
+
+            <span class="tag">Python</span>
+            <span class="tag">OOP</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">Git</span>
+            <span class="tag">Linux</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>Machine Learning</h3>
+
+          <div class="tags">
+
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">ML</span>
+            <span class="tag">DL</span>
+
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>AI Research</h3>
+
+          <div class="tags">
+
+            <span class="tag">Efficient AI</span>
+            <span class="tag">Sparse Models</span>
+            <span class="tag">Continual Learning</span>
+            <span class="tag">SSM</span>
+            <span class="tag">Reservoir Computing</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PROJECTS
+    ======================================================== -->
+
+    <section id="projects">
+
+      <div class="eyebrow">
+        03 / Projects
+      </div>
+
+      <h2>
+        From concepts to prototypes.
+      </h2>
+
+      <p class="section-description">
+        Selected experiments and projects that represent my
+        progression from programming toward AI research.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <h3>ANNADATA AI</h3>
+
+          <p>
+            An AI-assisted closed organic farming concept focused
+            on intelligent monitoring and efficient resource use.
+          </p>
+
+          <div class="tags">
+            <span class="tag">AI</span>
+            <span class="tag">Agriculture</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">STEM</span>
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>AI Research Lab</h3>
+
+          <p>
+            An ongoing collection of experiments exploring
+            efficient architectures, alternative neural networks,
+            memory and continual learning.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Research</span>
+            <span class="tag">Efficient AI</span>
+            <span class="tag">Architecture</span>
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>Python Playground</h3>
+
+          <p>
+            Programming experiments used to develop stronger
+            foundations in Python, algorithms, data structures
+            and machine learning.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">ML</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         RESEARCH
+    ======================================================== -->
+
+    <section id="research">
+
+      <div class="eyebrow">
+        04 / Research
+      </div>
+
+      <h2>
+        Questions I'm exploring.
+      </h2>
+
+      <p class="section-description">
+        My long-term direction is AI research with an emphasis
+        on understanding how intelligent systems can become
+        more efficient, adaptive and capable.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+
+          <h3>Efficient AI</h3>
+
+          <p>
+            How can models achieve useful intelligence while
+            reducing computation, memory and energy requirements?
+          </p>
+
+          <div class="tags">
+            <span class="tag">Sparse AI</span>
+            <span class="tag">Green AI</span>
+            <span class="tag">Quantization</span>
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>Alternative Architectures</h3>
+
+          <p>
+            Exploring architectures beyond conventional
+            transformer-heavy approaches.
+          </p>
+
+          <div class="tags">
+            <span class="tag">SSM</span>
+            <span class="tag">RWKV</span>
+            <span class="tag">Liquid Networks</span>
+            <span class="tag">Reservoir Computing</span>
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>Continual Intelligence</h3>
+
+          <p>
+            How can AI systems learn new information continuously
+            while retaining useful previous knowledge?
+          </p>
+
+          <div class="tags">
+            <span class="tag">Lifelong Learning</span>
+            <span class="tag">Memory</span>
+            <span class="tag">Continual Learning</span>
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>Emerging Computing</h3>
+
+          <p>
+            Investigating the intersection of AI with unusual
+            computational paradigms and specialized hardware.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Neuromorphic</span>
+            <span class="tag">Spiking AI</span>
+            <span class="tag">Hardware AI</span>
+            <span class="tag">QML</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         JOURNEY
+    ======================================================== -->
+
+    <section id="journey">
+
+      <div class="eyebrow">
+        05 / Journey
+      </div>
+
+      <h2>
+        The path so far.
+      </h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            CLASS 7
+          </div>
+
+          <h3>STEM & competitions</h3>
+
+          <p>
+            Began developing an interest in science, technology,
+            competitions and experimental projects.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            CLASS 8
+          </div>
+
+          <h3>Programming begins</h3>
+
+          <p>
+            Started learning Python and gradually moved from
+            basic programming toward machine learning concepts.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            2026 • CLASS 9
+          </div>
+
+          <h3>AI research direction</h3>
+
+          <p>
+            Building stronger foundations in mathematics,
+            Python, machine learning and experimental AI
+            architectures.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            NEXT
+          </div>
+
+          <h3>Mathematics → ML → Research</h3>
+
+          <p>
+            Deepen mathematical foundations, develop stronger
+            machine-learning implementations and eventually
+            contribute to serious research.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         ACHIEVEMENTS
+    ======================================================== -->
+
+    <section id="achievements">
+
+      <div class="eyebrow">
+        06 / Milestones
+      </div>
+
+      <h2>
+        Evidence of the journey.
+      </h2>
+
+      <div class="achievement-grid">
+
+        <div class="achievement">
+          <strong>Green Olympiad</strong>
+          <span>Gold Medal & Certificate</span>
+        </div>
+
+        <div class="achievement">
+          <strong>VVM</strong>
+          <span>State Level Camp participation</span>
+        </div>
+
+        <div class="achievement">
+          <strong>PSY</strong>
+          <span>National examination pathway</span>
+        </div>
+
+        <div class="achievement">
+          <strong>Academic Performance</strong>
+          <span>School-topper results in earlier classes</span>
+        </div>
+
+        <div class="achievement">
+          <strong>RBVP / NVS</strong>
+          <span>Participation in competitions and sports</span>
+        </div>
+
+        <div class="achievement">
+          <strong>STEM</strong>
+          <span>Ongoing science and technology projects</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         CONTACT
+    ======================================================== -->
+
+    <section id="contact">
+
+      <div class="contact-box">
+
+        <div class="eyebrow">
+          07 / Contact
+        </div>
+
+        <h2>
+          Let's build something interesting.
+        </h2>
+
+        <p>
+          For research discussions, STEM projects, technical
+          collaboration or long-term guidance, feel free to
+          connect.
+        </p>
+
+        <div class="contact-links">
+
+          <a
+            class="button primary"
+            href="mailto:akmstemlab@gmail.com"
+          >
+            Email me
+          </a>
+
+          <a
+            class="button"
+            href="https://github.com/akm2012-python"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            class="button"
+            href="https://youtube.com/@akmstemlab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer>
+
+    <div>
+      © 2026 Aditya Kumar Mohanani
+    </div>
+
+    <div>
+      Built with HTML, CSS, JavaScript & Three.js
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script type="module">
+
+    /* ========================================================
+       THREE.JS 3D MASCOT
+    ======================================================== */
+
+    import * as THREE from "three";
+
+    const container =
+      document.getElementById("mascot-container");
+
+
+    if (container) {
+
+      const scene =
+        new THREE.Scene();
+
+
+      const camera =
+        new THREE.PerspectiveCamera(
+          45,
+          container.clientWidth /
+          container.clientHeight,
+          0.1,
+          100
+        );
+
+
+      camera.position.set(
+        0,
+        0.4,
+        7
+      );
+
+
+      const renderer =
+        new THREE.WebGLRenderer({
+          antialias: true,
+          alpha: true
+        });
+
+
+      renderer.setPixelRatio(
+        Math.min(window.devicePixelRatio, 2)
+      );
+
+
+      renderer.setSize(
+        container.clientWidth,
+        container.clientHeight
+      );
+
+
+      renderer.outputColorSpace =
+        THREE.SRGBColorSpace;
+
+
+      container.appendChild(renderer.domElement);
+
+
+      /* ======================================================
+         LIGHTING
+      ======================================================= */
+
+      const ambient =
+        new THREE.AmbientLight(
+          0xffffff,
+          1.8
+        );
+
+      scene.add(ambient);
+
+
+      const pointLight =
+        new THREE.PointLight(
+          0x8899ff,
+          15,
+          15
+        );
+
+      pointLight.position.set(
+        3,
+        4,
+        5
+      );
+
+      scene.add(pointLight);
+
+
+      const pointLight2 =
+        new THREE.PointLight(
+          0x66ddff,
+          10,
+          12
+        );
+
+      pointLight2.position.set(
+        -4,
+        1,
+        3
+      );
+
+      scene.add(pointLight2);
+
+
+      /* ======================================================
+         MASCOT GROUP
+      ======================================================= */
+
+      const mascot =
+        new THREE.Group();
+
+      scene.add(mascot);
+
+
+      /* ======================================================
+         MATERIALS
+      ======================================================= */
+
+      const bodyMaterial =
+        new THREE.MeshStandardMaterial({
+          color: 0x171c2c,
+          metalness: 0.75,
+          roughness: 0.25
+        });
+
+
+      const darkMaterial =
+        new THREE.MeshStandardMaterial({
+          color: 0x090c16,
+          metalness: 0.8,
+          roughness: 0.2
+        });
+
+
+      const glowMaterial =
+        new THREE.MeshStandardMaterial({
+          color: 0x91a2ff,
+          emissive: 0x586cff,
+          emissiveIntensity: 3,
+          metalness: 0.25,
+          roughness: 0.2
+        });
+
+
+      const cyanMaterial =
+        new THREE.MeshStandardMaterial({
+          color: 0x75eaff,
+          emissive: 0x32cfff,
+          emissiveIntensity: 3,
+          metalness: 0.2,
+          roughness: 0.2
+        });
+
+
+      /* ======================================================
+         BODY
+      ======================================================= */
+
+      const body =
+        new THREE.Mesh(
+          new THREE.BoxGeometry(
+            1.65,
+            1.8,
+            1.05
+          ),
+          bodyMaterial
+        );
+
+      body.position.y = -0.8;
+
+      body.scale.set(
+        0.95,
+        1,
+        0.9
+      );
+
+      mascot.add(body);
+
+
+      /* ======================================================
+         HEAD
+      ======================================================= */
+
+      const head =
+        new THREE.Mesh(
+          new THREE.BoxGeometry(
+            2.15,
+            1.65,
+            1.45
+          ),
+          bodyMaterial
+        );
+
+      head.position.y = 0.9;
+
+      head.rotation.y = 0.04;
+
+      mascot.add(head);
+
+
+      /* ======================================================
+         FACE PANEL
+      ======================================================= */
+
+      const face =
+        new THREE.Mesh(
+          new THREE.BoxGeometry(
+            1.75,
+            1.05,
+            0.08
+          ),
+          darkMaterial
+        );
+
+      face.position.set(
+        0,
+        0.85,
+        0.75
+      );
+
+      mascot.add(face);
+
+
+      /* ======================================================
+         EYES
+      ======================================================= */
+
+      const eyeGeometry =
+        new THREE.SphereGeometry(
+          0.16,
+          24,
+          24
+        );
+
+
+      const leftEye =
+        new THREE.Mesh(
+          eyeGeometry,
+          cyanMaterial
+        );
+
+      leftEye.position.set(
+        -0.42,
+        0.9,
+        0.82
+      );
+
+      mascot.add(leftEye);
+
+
+      const rightEye =
+        new THREE.Mesh(
+          eyeGeometry,
+          cyanMaterial
+        );
+
+      rightEye.position.set(
+        0.42,
+        0.9,
+        0.82
+      );
+
+      mascot.add(rightEye);
+
+
+      /* ======================================================
+         CHEST CORE
+      ======================================================= */
+
+      const core =
+        new THREE.Mesh(
+          new THREE.OctahedronGeometry(
+            0.34,
+            1
+          ),
+          glowMaterial
+        );
+
+      core.position.set(
+        0,
+        -0.8,
+        0.58
+      );
+
+      mascot.add(core);
+
+
+      /* ======================================================
+         ARMS
+      ======================================================= */
+
+      const armGeometry =
+        new THREE.CapsuleGeometry(
+          0.22,
+          1.05,
+          8,
+          16
+        );
+
+
+      const leftArm =
+        new THREE.Mesh(
+          armGeometry,
+          bodyMaterial
+        );
+
+      leftArm.position.set(
+        -1.1,
+        -0.75,
+        0
+      );
+
+      leftArm.rotation.z =
+        -0.25;
+
+      mascot.add(leftArm);
+
+
+      const rightArm =
+        new THREE.Mesh(
+          armGeometry,
+          bodyMaterial
+        );
+
+      rightArm.position.set(
+        1.1,
+        -0.75,
+        0
+      );
+
+      rightArm.rotation.z =
+        0.25;
+
+      mascot.add(rightArm);
+
+
+      /* ======================================================
+         HANDS
+      ======================================================= */
+
+      const handGeometry =
+        new THREE.SphereGeometry(
+          0.3,
+          20,
+          20
+        );
+
+
+      const leftHand =
+        new THREE.Mesh(
+          handGeometry,
+          glowMaterial
+        );
+
+      leftHand.position.set(
+        -1.2,
+        -1.38,
+        0
+      );
+
+      mascot.add(leftHand);
+
+
+      const rightHand =
+        new THREE.Mesh(
+          handGeometry,
+          glowMaterial
+        );
+
+      rightHand.position.set(
+        1.2,
+        -1.38,
+        0
+      );
+
+      mascot.add(rightHand);
+
+
+      /* ======================================================
+         ANTENNA
+      ======================================================= */
+
+      const antenna =
+        new THREE.Mesh(
+          new THREE.CylinderGeometry(
+            0.045,
+            0.045,
+            0.65,
+            12
+          ),
+          darkMaterial
+        );
+
+      antenna.position.y =
+        2.05;
+
+      mascot.add(antenna);
+
+
+      const antennaTip =
+        new THREE.Mesh(
+          new THREE.SphereGeometry(
+            0.12,
+            20,
+            20
+          ),
+          cyanMaterial
+        );
+
+      antennaTip.position.y =
+        2.38;
+
+      mascot.add(antennaTip);
+
+
+      /* ======================================================
+         HOLOGRAPHIC RINGS
+      ======================================================= */
+
+      const ringMaterial =
+        new THREE.MeshBasicMaterial({
+          color: 0x7f91ff,
+          transparent: true,
+          opacity: 0.45
+        });
+
+
+      const ring1 =
+        new THREE.Mesh(
+          new THREE.TorusGeometry(
+            1.9,
+            0.015,
+            12,
+            100
+          ),
+          ringMaterial
+        );
+
+      ring1.rotation.x =
+        Math.PI / 2.2;
+
+      ring1.position.y =
+        -0.5;
+
+      mascot.add(ring1);
+
+
+      const ring2 =
+        new THREE.Mesh(
+          new THREE.TorusGeometry(
+            2.15,
+            0.012,
+            12,
+            100
+          ),
+          ringMaterial
+        );
+
+      ring2.rotation.y =
+        Math.PI / 2.5;
+
+      ring2.position.y =
+        -0.5;
+
+      mascot.add(ring2);
+
+
+      /* ======================================================
+         FLOATING CUBES
+      ======================================================= */
+
+      const cubeMaterial =
+        new THREE.MeshBasicMaterial({
+          color: 0x75eaff,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.55
+        });
+
+
+      const cubes = [];
+
+
+      for (let i = 0; i < 7; i++) {
+
+        const cube =
+          new THREE.Mesh(
+            new THREE.BoxGeometry(
+              0.16 + Math.random() * 0.18,
+              0.16 + Math.random() * 0.18,
+              0.16 + Math.random() * 0.18
+            ),
+            cubeMaterial
+          );
+
+
+        cube.position.set(
+          (Math.random() - 0.5) * 4.5,
+          (Math.random() - 0.5) * 4,
+          (Math.random() - 0.5) * 1.5
+        );
+
+
+        mascot.add(cube);
+
+        cubes.push({
+          mesh: cube,
+          speed: 0.3 + Math.random() * 0.6,
+          offset: Math.random() * 10
+        });
+
+      }
+
+
+      /* ======================================================
+         MOUSE INTERACTION
+      ======================================================= */
+
+      let targetRotationX = 0;
+      let targetRotationY = 0;
+
+
+      container.addEventListener(
+        "pointermove",
+        (event) => {
+
+          const rect =
+            container.getBoundingClientRect();
+
+
+          const x =
+            (event.clientX - rect.left) /
+            rect.width;
+
+
+          const y =
+            (event.clientY - rect.top) /
+            rect.height;
+
+
+          targetRotationY =
+            (x - 0.5) * 0.7;
+
+
+          targetRotationX =
+            (y - 0.5) * -0.35;
+
+        }
+      );
+
+
+      /* ======================================================
+         ANIMATION
+      ======================================================= */
+
+      const clock =
+        new THREE.Clock();
+
+
+      function animate() {
+
+        requestAnimationFrame(
+          animate
+        );
+
+
+        const time =
+          clock.getElapsedTime();
+
+
+        mascot.rotation.y +=
+          (targetRotationY -
+           mascot.rotation.y) *
+          0.04;
+
+
+        mascot.rotation.x +=
+          (targetRotationX -
+           mascot.rotation.x) *
+          0.04;
+
+
+        mascot.position.y =
+          Math.sin(time * 1.2) *
+          0.12;
+
+
+        core.rotation.x =
+          time * 1.8;
+
+        core.rotation.y =
+          time * 2;
+
+
+        ring1.rotation.z =
+          time * 0.3;
+
+
+        ring2.rotation.x =
+          time * 0.25;
+
+
+        antennaTip.scale.setScalar(
+          1 +
+          Math.sin(time * 4) * 0.12
+        );
+
+
+        cubes.forEach(
+          (item) => {
+
+            item.mesh.rotation.x +=
+              0.01 * item.speed;
+
+            item.mesh.rotation.y +=
+              0.013 * item.speed;
+
+            item.mesh.position.y +=
+              Math.sin(
+                time * item.speed +
+                item.offset
+              ) * 0.0015;
+
+          }
+        );
+
+
+        renderer.render(
+          scene,
+          camera
+        );
+
+      }
+
+
+      animate();
+
+
+      /* ======================================================
+         RESIZE
+      ======================================================= */
+
+      window.addEventListener(
+        "resize",
+        () => {
+
+          const width =
+            container.clientWidth;
+
+          const height =
+            container.clientHeight;
+
+
+          camera.aspect =
+            width / height;
+
+          camera.updateProjectionMatrix();
+
+
+          renderer.setSize(
+            width,
+            height
+          );
+
+        }
+      );
+
+    }
+
+
+    /* ========================================================
+       PARTICLE BACKGROUND
+    ======================================================== */
+
+    const canvas =
+      document.getElementById(
+        "particles"
+      );
+
+
+    const ctx =
+      canvas.getContext("2d");
+
+
+    let particles = [];
+
+
+    function resizeParticles() {
+
+      canvas.width =
+        window.innerWidth *
+        window.devicePixelRatio;
+
+      canvas.height =
+        window.innerHeight *
+        window.devicePixelRatio;
+
+
+      ctx.setTransform(
+        window.devicePixelRatio,
+        0,
+        0,
+        window.devicePixelRatio,
+        0,
+        0
+      );
+
+
+      particles = [];
+
+
+      const count =
+        Math.min(
+          100,
+          Math.floor(
+            window.innerWidth / 14
+          )
+        );
+
+
+      for (let i = 0; i < count; i++) {
+
+        particles.push({
+
+          x: Math.random() *
+            window.innerWidth,
+
+          y: Math.random() *
+            window.innerHeight,
+
+          r: Math.random() * 1.4,
+
+          vx:
+            (Math.random() - 0.5) *
+            0.25,
+
+          vy:
+            (Math.random() - 0.5) *
+            0.25
+
+        });
+
+      }
+
+    }
+
+
+    function drawParticles() {
+
+      ctx.clearRect(
+        0,
+        0,
+        window.innerWidth,
+        window.innerHeight
+      );
+
+
+      for (const p of particles) {
+
+        p.x += p.vx;
+
+        p.y += p.vy;
+
+
+        if (
+          p.x < 0 ||
+          p.x > window.innerWidth
+        ) {
+          p.vx *= -1;
+        }
+
+
+        if (
+          p.y < 0 ||
+          p.y > window.innerHeight
+        ) {
+          p.vy *= -1;
+        }
+
+
+        ctx.beginPath();
+
+        ctx.arc(
+          p.x,
+          p.y,
+          p.r,
+          0,
+          Math.PI * 2
+        );
+
+        ctx.fillStyle =
+          "rgba(150,170,255,0.45)";
+
+        ctx.fill();
+
+      }
+
+
+      requestAnimationFrame(
+        drawParticles
+      );
+
+    }
+
+
+    resizeParticles();
+
+    drawParticles();
+
+
+    window.addEventListener(
+      "resize",
+      resizeParticles
+    );
+
+  </script>
+
+</body>
+</html>
