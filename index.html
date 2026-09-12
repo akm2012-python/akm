@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+
+  <title>Aditya Kumar Mohanani | AKM STEM Lab | AI, STEM & Research</title>
+  <meta name="description" content="Official portfolio of Aditya Kumar Mohanani, a Class 9 student at PM SHRI Jawahar Navodaya Vidyalaya, Burhanpur, exploring AI, machine learning, Python, mathematics, sustainable technology, quantum computing and STEM research.">
+  <meta name="keywords" content="Aditya Kumar Mohanani, Aditya Mohanani, AKM, AKM STEM Lab, AKM STEM, akm2012, JNV Burhanpur, Jawahar Navodaya Vidyalaya Burhanpur, Class 9, student, AI, artificial intelligence, machine learning, Python, STEM, research, ANNADATA AI, sustainable technology, quantum computing">
+  <meta name="author" content="Aditya Kumar Mohanani">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://akm2012.netlify.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akm2012.netlify.app/">
+  <meta property="og:title" content="Aditya Kumar Mohanani | AKM STEM Lab">
+  <meta property="og:description" content="Student • Coder • STEM Explorer • Future Researcher — exploring AI, mathematics, sustainable technology, quantum computing and scientific research.">
+  <meta property="og:site_name" content="AKM STEM Lab">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aditya Kumar Mohanani | AKM STEM Lab">
+  <meta name="twitter:description" content="Official portfolio and STEM journey of Aditya Kumar Mohanani.">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aditya Kumar Mohanani",
+    "url": "https://akm2012.netlify.app/",
+    "jobTitle": "Student and STEM Explorer",
+    "description": "Class 9 student exploring artificial intelligence, machine learning, Python, mathematics, sustainable technology, quantum computing and STEM research.",
+    "sameAs": [
+      "https://youtube.com/@akmstemlab",
+      "https://github.com/akm2012-python"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Python",
+      "STEM",
+      "Mathematics",
+      "Sustainable Technology",
+      "Quantum Computing"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AKM STEM Lab",
+    "url": "https://akm2012.netlify.app/",
+    "description": "Official website of Aditya Kumar Mohanani and AKM STEM Lab."
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#030812;
+      --bg2:#071426;
+      --card:rgba(9,22,42,.72);
+      --card-solid:#09172c;
+      --text:#edf4ff;
+      --muted:#aebbd0;
+      --accent:#86adff;
+      --accent2:#4e73dc;
+      --cyan:#62dfff;
+      --line:rgba(134,173,255,.18);
+      --glow:rgba(92,146,255,.28);
+      --nav:rgba(3,8,18,.72);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      min-height:100vh;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%,rgba(50,100,190,.20),transparent 30%),
+        radial-gradient(circle at 90% 15%,rgba(0,210,255,.09),transparent 26%),
+        radial-gradient(circle at 50% 100%,rgba(60,90,190,.15),transparent 35%),
+        linear-gradient(135deg,var(--bg),var(--bg2) 55%,#030711);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      overflow-x:hidden;
+    }
+
+    body.light{
+      --bg:#edf4ff;--bg2:#dfeaff;--card:rgba(255,255,255,.72);
+      --card-solid:#fff;--text:#0b1730;--muted:#53617a;--line:rgba(40,70,130,.15);
+      --nav:rgba(245,249,255,.78);
+    }
+
+    a{color:inherit}
+    button{font:inherit}
+    ::selection{background:var(--accent);color:#031022}
+
+    #stars,#grid{
+      position:fixed;inset:0;pointer-events:none;z-index:-3
+    }
+    #stars{
+      background-image:
+        radial-gradient(1px 1px at 7% 15%,#fff,transparent),
+        radial-gradient(1px 1px at 18% 74%,#a9c4ff,transparent),
+        radial-gradient(1px 1px at 31% 42%,#fff,transparent),
+        radial-gradient(1px 1px at 45% 83%,#9ebcff,transparent),
+        radial-gradient(1px 1px at 62% 21%,#fff,transparent),
+        radial-gradient(1px 1px at 74% 67%,#9dbbff,transparent),
+        radial-gradient(1px 1px at 88% 34%,#fff,transparent);
+      opacity:.45;
+      animation:drift 28s linear infinite;
+    }
+    #grid{
+      z-index:-2;
+      opacity:.16;
+      background-image:linear-gradient(rgba(120,160,255,.08) 1px,transparent 1px),
+                       linear-gradient(90deg,rgba(120,160,255,.08) 1px,transparent 1px);
+      background-size:70px 70px;
+      mask-image:linear-gradient(to bottom,transparent,black 30%,black 70%,transparent);
+      transform:perspective(600px) rotateX(55deg) translateY(18%);
+      transform-origin:center bottom;
+    }
+    @keyframes drift{to{transform:translateY(-110px)}}
+
+    .progress{
+      position:fixed;top:0;left:0;height:3px;width:0;
+      background:linear-gradient(90deg,var(--accent),var(--cyan));
+      z-index:3000;box-shadow:0 0 15px var(--accent)
+    }
+
+    nav{
+      position:sticky;top:0;z-index:2000;
+      backdrop-filter:blur(18px);
+      background:var(--nav);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:auto;padding:13px 22px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px
+    }
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:.5px}
+    .brand-mark{
+      width:34px;height:34px;border-radius:11px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#061020;box-shadow:0 0 25px var(--glow)
+    }
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{font-size:.88rem;text-decoration:none;color:var(--muted);transition:.25s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-actions{display:flex;gap:8px}
+    .icon-btn{
+      width:38px;height:38px;border:1px solid var(--line);border-radius:50%;
+      background:rgba(100,140,220,.08);color:var(--text);cursor:pointer
+    }
+
+    .hero{
+      max-width:var(--max);min-height:calc(100vh - 62px);margin:auto;
+      padding:70px 22px 50px;display:grid;grid-template-columns:1.1fr .9fr;
+      align-items:center;gap:30px
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);
+      background:rgba(100,140,220,.08);padding:7px 13px;border-radius:999px;
+      color:var(--accent);font-size:.82rem;margin-bottom:22px
+    }
+    .pulse{width:8px;height:8px;border-radius:50%;background:#6ff3b0;box-shadow:0 0 15px #6ff3b0}
+    h1{
+      font-size:clamp(3rem,7vw,6.8rem);line-height:.93;letter-spacing:-5px;
+      margin-bottom:22px;
+      background:linear-gradient(120deg,#fff 5%,#a8c5ff 50%,#5c84ed 95%);
+      -webkit-background-clip:text;color:transparent
+    }
+    .hero h2{font-size:clamp(1.2rem,2.4vw,1.8rem);color:var(--accent);font-weight:600;margin-bottom:18px}
+    .hero-copy{font-size:1.05rem;color:var(--muted);max-width:720px}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 19px;border-radius:999px;text-decoration:none;font-weight:750;
+      border:1px solid var(--line);transition:.28s;cursor:pointer
+    }
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#061021;border:none}
+    .btn.secondary{background:rgba(100,140,220,.08)}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(60,100,210,.22)}
+
+    #mascot-wrap{
+      height:580px;min-height:420px;position:relative;display:grid;place-items:center;
+      border:1px solid var(--line);border-radius:32px;
+      background:
+        radial-gradient(circle at 50% 45%,rgba(83,137,255,.17),transparent 34%),
+        linear-gradient(180deg,rgba(10,27,52,.55),rgba(3,10,21,.45));
+      overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.35),inset 0 0 50px rgba(90,140,255,.05)
+    }
+    #mascot-wrap::before{
+      content:"";position:absolute;width:260px;height:260px;border-radius:50%;
+      border:1px solid rgba(130,175,255,.2);box-shadow:0 0 80px rgba(90,150,255,.14);
+      animation:orbit 12s linear infinite
+    }
+    #mascot{width:100%;height:100%}
+    .mascot-label{
+      position:absolute;bottom:20px;left:20px;right:20px;padding:12px 15px;
+      border:1px solid var(--line);border-radius:15px;background:rgba(3,10,21,.58);
+      backdrop-filter:blur(10px);font-size:.82rem;color:var(--muted)
+    }
+    .mascot-label strong{color:var(--accent)}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+
+    section{scroll-margin-top:85px}
+    .section{max-width:var(--max);margin:auto;padding:95px 22px}
+    .section-head{text-align:center;margin-bottom:42px}
+    .kicker{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);margin:8px 0 10px}
+    .section-head p{color:var(--muted);max-width:700px;margin:auto}
+
+    .glass{
+      background:var(--card);border:1px solid var(--line);border-radius:22px;
+      backdrop-filter:blur(16px);box-shadow:0 25px 70px rgba(0,0,0,.24)
+    }
+    .about-grid,.project-grid,.achievement-grid,.future-grid{
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px
+    }
+    .card{padding:28px}
+    .card h3{color:var(--accent);margin-bottom:12px;font-size:1.25rem}
+    .card p,.card li{color:var(--muted)}
+    .card p+p{margin-top:12px}
+    .card ul{padding-left:20px}
+    .card li{margin:7px 0}
+
+    .stats{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px
+    }
+    .stat{text-align:center;padding:22px 12px}
+    .stat strong{display:block;font-size:1.75rem;color:var(--accent)}
+    .stat span{color:var(--muted);font-size:.82rem}
+
+    .timeline{max-width:900px;margin:auto;position:relative}
+    .timeline::before{content:"";position:absolute;left:19px;top:5px;bottom:5px;width:2px;background:linear-gradient(var(--accent),transparent)}
+    .timeline-item{position:relative;padding-left:60px;margin-bottom:34px}
+    .timeline-dot{
+      position:absolute;left:11px;top:4px;width:17px;height:17px;border-radius:50%;
+      background:var(--accent);box-shadow:0 0 20px var(--glow)
+    }
+    .timeline-item h3{color:var(--accent);margin-bottom:5px}
+    .timeline-item p{color:var(--muted)}
+
+    .project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .project{position:relative;overflow:hidden}
+    .project::after{
+      content:"";position:absolute;right:-50px;top:-50px;width:130px;height:130px;border-radius:50%;
+      background:radial-gradient(circle,var(--glow),transparent 65%);pointer-events:none
+    }
+    .tag{
+      display:inline-block;padding:5px 9px;border:1px solid var(--line);border-radius:999px;
+      color:var(--accent);font-size:.7rem;margin-bottom:12px
+    }
+
+    .skills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+    .skill{
+      padding:9px 13px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(100,140,220,.06);color:var(--muted);font-size:.86rem
+    }
+
+    .quote{
+      text-align:center;padding:45px 25px;position:relative
+    }
+    .quote blockquote{font-size:clamp(1.3rem,3vw,2rem);font-weight:700;max-width:800px;margin:auto}
+    .quote cite{display:block;color:var(--accent);margin-top:15px;font-style:normal}
+
+    .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .link-card{text-decoration:none}
+    .link-card strong{display:block;color:var(--accent);margin-bottom:6px}
+    .link-card span{color:var(--muted);font-size:.9rem}
+
+    footer{
+      border-top:1px solid var(--line);padding:50px 22px;text-align:center;color:var(--muted)
+    }
+    footer strong{color:var(--accent)}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    #topBtn{
+      position:fixed;right:20px;bottom:20px;width:45px;height:45px;border-radius:50%;
+      border:1px solid var(--line);background:rgba(7,18,36,.86);color:var(--text);
+      cursor:pointer;z-index:1800;opacity:0;pointer-events:none;transition:.25s
+    }
+    #topBtn.show{opacity:1;pointer-events:auto}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;padding-top:45px}
+      #mascot-wrap{height:500px}
+      .project-grid{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none}
+    }
+    @media(max-width:650px){
+      h1{letter-spacing:-3px}
+      .about-grid,.achievement-grid,.future-grid,.project-grid,.link-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .hero{min-height:auto;padding-bottom:20px}
+      #mascot-wrap{height:430px}
+      .section{padding:70px 17px}
+      .nav-inner{padding:11px 15px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress" id="progress"></div>
+  <div id="stars"></div>
+  <div id="grid"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="AKM STEM Lab home">
+        <span class="brand-mark">AKM</span>
+        <span>STEM LAB</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#future">Vision</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <header class="hero">
+      <div class="reveal">
+        <div class="eyebrow"><span class="pulse"></span> Class 9 • PM SHRI JNV Burhanpur • India</div>
+
+        <h1>Aditya<br>Kumar<br>Mohanani</h1>
+
+        <h2>Student • Coder • STEM Explorer • Future Researcher</h2>
+
+        <p class="hero-copy">
+          I am exploring how mathematics, computer science, artificial intelligence,
+          sustainable technology, advanced computing and scientific curiosity can turn
+          ideas into useful things.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn primary" href="#projects">Explore Projects ↓</a>
+          <a class="btn secondary" href="https://youtube.com/@akmstemlab" target="_blank" rel="noopener">▶ AKM STEM Lab</a>
+          <a class="btn secondary" href="https://github.com/akm2012-python" target="_blank" rel="noopener">⌘ GitHub</a>
+        </div>
+      </div>
+
+      <div id="mascot-wrap" class="reveal" aria-label="Interactive 3D AKM STEM Lab mascot">
+        <div id="mascot"></div>
+        <div class="mascot-label">
+          <strong>AKM-01</strong> — interactive STEM explorer mascot • drag to rotate • scroll to zoom
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="section">
+        <div class="section-head reveal">
+          <div class="kicker">01 / About</div>
+          <h2>The Journey So Far</h2>
+          <p>A student profile built around learning, experimenting and documenting progress.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="glass card reveal">
+            <h3>Who I Am</h3>
+            <p>
+              I am Aditya Kumar Mohanani, a Class 9 student at PM SHRI Jawahar Navodaya
+              Vidyalaya, Burhanpur. I started coding with Python and gradually moved toward
+              machine learning, mathematics, AI systems and broader STEM research.
+            </p>
+            <p>
+              My aim is to understand the ideas underneath technology — not just use
+              libraries or copy code. I am especially interested in the point where
+              mathematical reasoning, algorithms and real-world engineering meet.
+            </p>
+          </article>
+
+          <article class="glass card reveal">
+            <h3>Beyond Coding</h3>
+            <p>
+              My interests also include science and space, sustainable technology,
+              quantum computing, engineering, reading, travelling, cricket, table tennis
+              and collecting coins.
+            </p>
+            <p>
+              Coin collecting has become a separate window into history, geography,
+              currencies and physical artifacts, with examples from many countries and
+              historical periods.
+            </p>
+          </article>
+        </div>
+
+        <div class="stats">
+          <div class="glass stat reveal"><strong>Class 9</strong><span>Current academic stage</span></div>
+          <div class="glass stat reveal"><strong>AI + STEM</strong><span>Core exploration</span></div>
+          <div class="glass stat reveal"><strong>165+</strong><span>Coin types collected</span></div>
+          <div class="glass stat reveal"><strong>50+</strong><span>Countries represented</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <div class="section">
+        <div class="section-head reveal">
+          <div class="kicker">02 / Achievements</div>
+          <h2>Academic & STEM Record</h2>
+          <p>Achievements and participation are separated from future ambitions.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <h3>Class 7</h3>
+            <p>
+              Academic performance including 97.83%, school/class topper status,
+              VVM State Level Camp participation (MP Region 2) and PSY National Examination.
+            </p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <h3>Class 8</h3>
+            <p>
+              Continued strong academic performance, VVM State Level Camp selection/participation
+              and Green Olympiad 2025 Gold Medal.
+            </p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <h3>Class 9</h3>
+            <p>
+              Continued work in AI, Python, mathematics and STEM; cluster-level science
+              exhibition participation, regional-level table tennis participation and
+              MP Tourism Quiz 2026 Gold Medal.
+            </p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <h3>Ongoing</h3>
+            <p>
+              Building projects, studying machine learning, exploring research literature,
+              documenting experiments and developing AKM STEM Lab as a personal learning platform.
+            </p>
+          </div>
+        </div>
+
+        <div class="achievement-grid" style="margin-top:30px">
+          <article class="glass card reveal">
+            <h3>🏅 Competitions & Exams</h3>
+            <ul>
+              <li>Green Olympiad — Gold Medal</li>
+              <li>VVM — State Level Camp participation</li>
+              <li>PSY National Examination — Level 2 / Mains</li>
+              <li>IOQM preparation and participation</li>
+              <li>MP Tourism Quiz 2026 — Gold Medal</li>
+            </ul>
+          </article>
+
+          <article class="glass card reveal">
+            <h3>🔬 STEM & Activities</h3>
+            <ul>
+              <li>Cluster-level science exhibition participation</li>
+              <li>Regional-level table tennis participation</li>
+              <li>NVS/sports cluster activities</li>
+              <li>Python and AI/ML experiments</li>
+              <li>Independent STEM project development</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section">
+        <div class="section-head reveal">
+          <div class="kicker">03 / Projects</div>
+          <h2>Things I Am Building</h2>
+          <p>Some are prototypes, some are experiments, and some are research directions.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="glass card project reveal">
+            <span class="tag">AI • Agriculture • Sustainability</span>
+            <h3>ANNADATA AI</h3>
+            <p>
+              An AI-assisted closed organic farming concept exploring real soil sensing,
+              smart power monitoring and practical low-cost automation.
+            </p>
+            <ul>
+              <li>Real soil sensors</li>
+              <li>Smart power measurement</li>
+              <li>Wireless control concept</li>
+              <li>Organic farming approach</li>
+              <li>Low-cost prototype direction</li>
+            </ul>
+            <p>Developed in collaboration with Dr. Tanmay Basu.</p>
+          </article>
+
+          <article class="glass card project reveal">
+            <span class="tag">Deep Learning</span>
+            <h3>100M Parameter Scratch Model</h3>
+            <p>
+              An exploration of training a large neural network model from scratch under
+              limited compute, used to understand parameters, architecture, training and
+              resource constraints.
+            </p>
+          </article>
+
+          <article class="glass card project reveal">
+            <span class="tag">Education • AI</span>
+            <h3>Nexteron AI</h3>
+            <p>
+              A concept for an AI-oriented learning initiative for students in Classes 8–12,
+              combining mathematics, science, programming and artificial intelligence.
+            </p>
+          </article>
+
+          <article class="glass card project reveal">
+            <span class="tag">Conversational AI</span>
+            <h3>Chaybot / Chaychan</h3>
+            <p>
+              Experimental conversational-AI concepts exploring useful assistants for
+              learning, interaction and productivity.
+            </p>
+          </article>
+
+          <article class="glass card project reveal">
+            <span class="tag">STEM Education</span>
+            <h3>AKM STEM Lab</h3>
+            <p>
+              My personal STEM platform for documenting AI/ML, Python, experiments,
+              research ideas, mathematics and technology learning.
+            </p>
+            <a class="btn secondary" style="margin-top:15px" href="https://youtube.com/@akmstemlab" target="_blank" rel="noopener">Open YouTube ↗</a>
+          </article>
+
+          <article class="glass card project reveal">
+            <span class="tag">AI Architecture</span>
+            <h3>Efficient AI Experiments</h3>
+            <p>
+              Exploring RAG, LLMs, SSMs, RWKV, LoRA, QLoRA, sparse AI, continual learning,
+              reservoir computing, neuro-symbolic systems and energy-efficient AI.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section">
+        <div class="section-head reveal">
+          <div class="kicker">04 / Research</div>
+          <h2>Questions I Want to Understand</h2>
+          <p>The topics are broad right now; the goal is to gradually turn curiosity into depth.</p>
+        </div>
+
+        <div class="glass card reveal">
+          <div class="skills">
+            <span class="skill">Artificial Intelligence</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Deep Learning</span>
+            <span class="skill">Generative AI</span>
+            <span class="skill">Python</span>
+            <span class="skill">NumPy</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">Scikit-Learn</span>
+            <span class="skill">PyTorch</span>
+            <span class="skill">LLMs</span>
+            <span class="skill">RAG</span>
+            <span class="skill">SSM</span>
+            <span class="skill">RWKV</span>
+            <span class="skill">LoRA</span>
+            <span class="skill">QLoRA</span>
+            <span class="skill">Sparse AI</span>
+            <span class="skill">Green AI</span>
+            <span class="skill">Continual Learning</span>
+            <span class="skill">Reservoir Computing</span>
+            <span class="skill">Neuro-Symbolic AI</span>
+            <span class="skill">Neuromorphic Computing</span>
+            <span class="skill">Quantum Computing</span>
+            <span class="skill">Quantum ML</span>
+            <span class="skill">AI Hardware</span>
+            <span class="skill">Sustainable Technology</span>
+            <span class="skill">Aerospace</span>
+          </div>
+        </div>
+
+        <div class="about-grid" style="margin-top:20px">
+          <article class="glass card reveal">
+            <h3>Learning Path</h3>
+            <p><b>Foundations:</b> Python, algorithms, data structures, logic and mathematics.</p>
+            <p><b>ML:</b> NumPy, Pandas, Scikit-Learn, statistics and linear algebra.</p>
+            <p><b>Deep Learning:</b> PyTorch, neural networks, optimization and architectures.</p>
+            <p><b>Research:</b> papers, experiments, reproducibility, mathematical reasoning and original questions.</p>
+          </article>
+
+          <article class="glass card reveal">
+            <h3>Research Principle</h3>
+            <p>
+              I want to understand why an AI method works, where it fails, how much compute
+              it needs and whether a simpler or more efficient approach is possible.
+            </p>
+            <p>
+              A project is more valuable when its claims can be tested, measured and reproduced.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="future">
+      <div class="section">
+        <div class="section-head reveal">
+          <div class="kicker">05 / Vision</div>
+          <h2>Where This Could Go</h2>
+          <p>These are goals and possibilities — not claims about the future.</p>
+        </div>
+
+        <div class="future-grid">
+          <article class="glass card reveal"><h3>🧠 AI Research</h3><p>Develop the mathematical, computational and experimental skills needed to contribute to AI research.</p></article>
+          <article class="glass card reveal"><h3>🌱 Green Technology</h3><p>Explore systems that improve useful outcomes without ignoring energy, resources and environmental constraints.</p></article>
+          <article class="glass card reveal"><h3>🚀 Space & Science</h3><p>Keep exploring aerospace, physics and the scientific questions that extend beyond Earth.</p></article>
+          <article class="glass card reveal"><h3>⚛️ Quantum Computing</h3><p>Investigate the intersection of quantum physics, mathematics and computation.</p></article>
+          <article class="glass card reveal"><h3>⚙️ AI Hardware</h3><p>Learn how algorithms become real systems through accelerators, memory, chips and efficient computing.</p></article>
+          <article class="glass card reveal"><h3>🌍 Real-World Impact</h3><p>Use research and engineering to tackle meaningful problems rather than optimizing only for impressive demos.</p></article>
+        </div>
+
+        <div class="glass quote reveal" style="margin-top:20px">
+          <blockquote>“Learn deeply. Build things. Test ideas. Keep going.”</blockquote>
+          <cite>— Aditya Kumar Mohanani</cite>
+        </div>
+      </div>
+    </section>
+
+    <section id="online">
+      <div class="section">
+        <div class="section-head reveal">
+          <div class="kicker">06 / Online</div>
+          <h2>My Work on the Web</h2>
+          <p>Public places where projects and learning can be documented.</p>
+        </div>
+
+        <div class="link-grid">
+          <a class="glass card link-card reveal" href="https://youtube.com/@akmstemlab" target="_blank" rel="noopener">
+            <strong>▶ AKM STEM Lab</strong>
+            <span>AI, ML, Python, STEM experiments and technology learning.</span>
+          </a>
+          <a class="glass card link-card reveal" href="https://github.com/akm2012-python" target="_blank" rel="noopener">
+            <strong>⌘ GitHub</strong>
+            <span>Code, experiments and future research projects.</span>
+          </a>
+          <a class="glass card link-card reveal" href="https://www.kaggle.com/" target="_blank" rel="noopener">
+            <strong>▣ Kaggle</strong>
+            <span>Datasets, machine-learning experiments and data science practice.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Aditya Kumar Mohanani</strong></p>
+    <p>AKM STEM Lab • Student • Coder • STEM Explorer • Future Researcher</p>
+    <p style="margin-top:10px">© <span id="year"></span> Aditya Kumar Mohanani</p>
+  </footer>
+
+  <button id="topBtn" aria-label="Back to top">↑</button>
+
+  <!-- Three.js for the interactive mascot -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+  <script>
+    // ---------- Theme ----------
+    const themeBtn = document.getElementById("themeBtn");
+    const savedTheme = localStorage.getItem("akm-theme");
+    if (savedTheme === "light") document.body.classList.add("light");
+    themeBtn.textContent = document.body.classList.contains("light") ? "☀" : "☾";
+
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+      const light = document.body.classList.contains("light");
+      localStorage.setItem("akm-theme", light ? "light" : "dark");
+      themeBtn.textContent = light ? "☀" : "☾";
+    });
+
+    // ---------- Scroll progress ----------
+    const progress = document.getElementById("progress");
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = (scrollY / max * 100) + "%";
+      topBtn.classList.toggle("show", scrollY > 600);
+    }, {passive:true});
+
+    topBtn.addEventListener("click", () => scrollTo({top:0,behavior:"smooth"}));
+
+    // ---------- Reveal animations ----------
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ---------- 3D mascot ----------
+    const host = document.getElementById("mascot");
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(42, host.clientWidth / host.clientHeight, .1, 100);
+    camera.position.set(0, 1.2, 7.2);
+
+    const renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setSize(host.clientWidth, host.clientHeight);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    host.appendChild(renderer.domElement);
+
+    const mascot = new THREE.Group();
+    scene.add(mascot);
+
+    // Materials
+    const bodyMat = new THREE.MeshStandardMaterial({color:0x263d63, metalness:.72, roughness:.28});
+    const lightMat = new THREE.MeshStandardMaterial({color:0x9ebdff, metalness:.55, roughness:.22});
+    const darkMat = new THREE.MeshStandardMaterial({color:0x081322, metalness:.8, roughness:.2});
+    const cyanMat = new THREE.MeshStandardMaterial({color:0x55e6ff, emissive:0x1a7890, emissiveIntensity:2.2});
+    const whiteMat = new THREE.MeshStandardMaterial({color:0xeaf2ff, metalness:.3, roughness:.2});
+
+    function box(w,h,d,mat,r=0.12){
+      const g = new THREE.BoxGeometry(w,h,d);
+      const m = new THREE.Mesh(g,mat);
+      return m;
+    }
+
+    function sphere(s,mat){
+      return new THREE.Mesh(new THREE.SphereGeometry(s,32,24),mat);
+    }
+
+    // Torso
+    const torso = new THREE.Group();
+    const chest = box(1.7,1.65,.85,bodyMat);
+    torso.add(chest);
+
+    // Chest core
+    const core = sphere(.31,cyanMat);
+    core.scale.set(1,.72,.22);
+    core.position.set(0,.05,.49);
+    torso.add(core);
+
+    // Head
+    const head = new THREE.Group();
+    const headBox = box(1.45,1.15,1.1,lightMat);
+    head.add(headBox);
+
+    // Face visor
+    const visor = box(1.08,.48,.08,darkMat);
+    visor.position.set(0,.03,.58);
+    head.add(visor);
+
+    // Eyes
+    [-.27,.27].forEach(x=>{
+      const eye = sphere(.10,cyanMat);
+      eye.position.set(x,.03,.66);
+      eye.scale.set(1,.75,.35);
+      head.add(eye);
+    });
+
+    // Antenna
+    const rod = new THREE.Mesh(new THREE.CylinderGeometry(.035,.035,.38,16),whiteMat);
+    rod.position.set(0,.82,0);
+    head.add(rod);
+    const antenna = sphere(.09,cyanMat);
+    antenna.position.set(0,1.04,0);
+    head.add(antenna);
+
+    head.position.y = 1.65;
+    torso.add(head);
+
+    // Arms
+    function arm(side){
+      const a = new THREE.Group();
+      const upper = box(.43,1.25,.48,bodyMat);
+      upper.position.y=-.62;
+      a.add(upper);
+      const joint = sphere(.25,lightMat);
+      joint.position.y=-1.25;
+      a.add(joint);
+      a.position.x = side*1.18;
+      a.position.y=.35;
+      a.rotation.z = side * -.13;
+      return a;
+    }
+
+    torso.add(arm(-1));
+    torso.add(arm(1));
+
+    // Waist
+    const waist = box(1.15,.42,.72,darkMat);
+    waist.position.y=-1.03;
+    torso.add(waist);
+
+    // Legs
+    function leg(side){
+      const l = new THREE.Group();
+      const thigh = box(.57,1.1,.62,bodyMat);
+      thigh.position.y=-.58;
+      l.add(thigh);
+      const knee = sphere(.22,lightMat);
+      knee.position.y=-1.18;
+      l.add(knee);
+      const foot = box(.68,.34,.95,darkMat);
+      foot.position.set(0,-1.55,.12);
+      l.add(foot);
+      l.position.x=side*.55;
+      return l;
+    }
+
+    torso.add(leg(-1));
+    torso.add(leg(1));
+
+    // Shoulder badge / AKM panel
+    const badge = box(.55,.25,.06,whiteMat);
+    badge.position.set(0,.48,.48);
+    torso.add(badge);
+
+    mascot.add(torso);
+    mascot.position.y=.1;
+
+    // Floating rings
+    const ringMat = new THREE.MeshBasicMaterial({color:0x77a8ff,transparent:true,opacity:.35});
+    const ring1 = new THREE.Mesh(new THREE.TorusGeometry(2.05,.012,12,100),ringMat);
+    ring1.rotation.x=Math.PI/2.2;
+    ring1.position.y=.15;
+    scene.add(ring1);
+
+    const ring2 = new THREE.Mesh(new THREE.TorusGeometry(2.45,.008,12,100),ringMat);
+    ring2.rotation.x=Math.PI/2.8;
+    ring2.rotation.y=.5;
+    scene.add(ring2);
+
+    // Particle field
+    const count=450;
+    const positions=new Float32Array(count*3);
+    for(let i=0;i<count;i++){
+      positions[i*3]=(Math.random()-.5)*8;
+      positions[i*3+1]=(Math.random()-.5)*7;
+      positions[i*3+2]=(Math.random()-.5)*5;
+    }
+    const starGeo=new THREE.BufferGeometry();
+    starGeo.setAttribute("position",new THREE.BufferAttribute(positions,3));
+    const starMat=new THREE.PointsMaterial({color:0x9dbbff,size:.025,transparent:true,opacity:.75});
+    scene.add(new THREE.Points(starGeo,starMat));
+
+    // Lighting
+    scene.add(new THREE.AmbientLight(0x7897c8,.75));
+    const key=new THREE.DirectionalLight(0xb9d2ff,2.2);
+    key.position.set(3,5,5);
+    scene.add(key);
+    const fill=new THREE.PointLight(0x3bdcff,5,12);
+    fill.position.set(-3,1,4);
+    scene.add(fill);
+
+    // Mouse/touch interaction
+    let targetX=0,targetY=0,currentX=0,currentY=0;
+    let zoom=7.2;
+
+    host.addEventListener("pointermove", e=>{
+      const r=host.getBoundingClientRect();
+      targetX=((e.clientX-r.left)/r.width-.5)*1.5;
+      targetY=((e.clientY-r.top)/r.height-.5)*.7;
+    });
+
+    host.addEventListener("wheel",e=>{
+      e.preventDefault();
+      zoom=Math.max(5.4,Math.min(9.2,zoom+e.deltaY*.004));
+      camera.position.z=zoom;
+    },{passive:false});
+
+    function resize(){
+      const w=host.clientWidth,h=host.clientHeight;
+      camera.aspect=w/h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w,h);
+    }
+    addEventListener("resize",resize);
+
+    const clock=new THREE.Clock();
+
+    function animate(){
+      requestAnimationFrame(animate);
+      const t=clock.getElapsedTime();
+
+      currentX += (targetX-currentX)*.045;
+      currentY += (targetY-currentY)*.045;
+
+      torso.rotation.y=currentX + Math.sin(t*.55)*.08;
+      torso.rotation.x=currentY*.22;
+      torso.position.y=.08+Math.sin(t*1.5)*.08;
+
+      ring1.rotation.z=t*.25;
+      ring2.rotation.z=-t*.18;
+
+      antenna.material.emissiveIntensity=1.5+Math.sin(t*3)*.8;
+
+      renderer.render(scene,camera);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
