@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Python Programming Guide | Aditya Kumar Mohanani
+</title>
+
+<meta
+  name="description"
+  content="A beginner-friendly Python programming guide covering Python basics, variables, conditions, loops, functions, data structures, OOP and programming fundamentals."
+>
+
+<meta
+  name="robots"
+  content="index, follow"
+>
+
+<link
+  rel="canonical"
+  href="https://akm2012.netlify.app/pythonguide.html"
+>
+
+<meta
+  property="og:type"
+  content="article"
+>
+
+<meta
+  property="og:title"
+  content="Python Programming: A Comprehensive Guide"
+>
+
+<meta
+  property="og:description"
+  content="A practical introduction to Python programming and its core concepts."
+>
+
+<meta
+  property="og:url"
+  content="https://akm2012.netlify.app/pythonguide.html"
+>
+
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+>
+
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+  rel="stylesheet"
+>
+
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Python Programming: A Comprehensive Guide",
+  "description":"A beginner-friendly guide to Python programming.",
+  "author":{
+    "@type":"Person",
+    "name":"Aditya Kumar Mohanani",
+    "url":"https://akm2012.netlify.app/"
+  },
+  "publisher":{
+    "@type":"Person",
+    "name":"Aditya Kumar Mohanani"
+  },
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://akm2012.netlify.app/pythonguide.html"
+  }
+}
+</script>
+
+
+<style>
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top,
+      #14213d,
+      #05070d 60%
+    );
+
+  color:#f4f7ff;
+
+  font-family:"Inter",sans-serif;
+
+  line-height:1.75;
+}
+
+nav {
+  position:sticky;
+
+  top:0;
+
+  z-index:10;
+
+  padding:18px 7vw;
+
+  background:
+    rgba(4,6,12,0.82);
+
+  backdrop-filter:blur(15px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.08);
+}
+
+nav a {
+  color:#9eafff;
+
+  text-decoration:none;
+
+  font-weight:700;
+}
+
+main {
+  width:min(850px,90%);
+
+  margin:auto;
+
+  padding:100px 0;
+}
+
+.eyebrow {
+  color:#8fa4ff;
+
+  font-size:.75rem;
+
+  font-weight:800;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+  margin-bottom:15px;
+}
+
+h1,h2,h3 {
+  font-family:"Space Grotesk",sans-serif;
+}
+
+h1 {
+  font-size:clamp(2.8rem,7vw,5.5rem);
+
+  line-height:1;
+
+  letter-spacing:-.06em;
+
+  margin-bottom:25px;
+}
+
+h2 {
+  font-size:2rem;
+
+  margin:
+    55px 0 15px;
+}
+
+h3 {
+  margin:
+    30px 0 8px;
+}
+
+p {
+  color:#aab5c9;
+
+  margin-bottom:16px;
+}
+
+pre {
+  overflow:auto;
+
+  padding:20px;
+
+  margin:20px 0;
+
+  border-radius:15px;
+
+  background:#02040a;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+code {
+  color:#a9c0ff;
+}
+
+.card {
+  margin-top:30px;
+
+  padding:25px;
+
+  border-radius:20px;
+
+  background:
+    rgba(255,255,255,.045);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.links {
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:50px;
+}
+
+.links a {
+  padding:11px 17px;
+
+  border-radius:10px;
+
+  background:#fff;
+
+  color:#05070d;
+
+  text-decoration:none;
+
+  font-weight:700;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<nav>
+  <a href="index.html">
+    ← AKM STEM Lab
+  </a>
+</nav>
+
+
+<main>
+
+<div class="eyebrow">
+  PYTHON • PROGRAMMING
+</div>
+
+<h1>
+  Python Programming:
+  A Comprehensive Guide
+</h1>
+
+<p>
+  Python is a high-level programming language known for
+  readable syntax and a large ecosystem of libraries.
+  It is widely used for software development, automation,
+  data science and artificial intelligence.
+</p>
+
+
+<h2>
+  1. Variables
+</h2>
+
+<p>
+  Variables store values that programs can work with.
+</p>
+
+<pre><code>
+name = "Aditya"
+age = 14
+
+print(name)
+print(age)
+</code></pre>
+
+
+<h2>
+  2. Conditions
+</h2>
+
+<p>
+  Conditional statements allow programs to make decisions.
+</p>
+
+<pre><code>
+marks = 90
+
+if marks >= 90:
+    print("Excellent")
+elif marks >= 60:
+    print("Good")
+else:
+    print("Keep learning")
+</code></pre>
+
+
+<h2>
+  3. Loops
+</h2>
+
+<p>
+  Loops repeat a block of code.
+</p>
+
+<pre><code>
+for i in range(5):
+    print(i)
+</code></pre>
+
+
+<h2>
+  4. Functions
+</h2>
+
+<p>
+  Functions organize reusable pieces of logic.
+</p>
+
+<pre><code>
+def square(x):
+    return x * x
+
+print(square(5))
+</code></pre>
+
+
+<h2>
+  5. Python Data Structures
+</h2>
+
+<div class="card">
+
+<h3>Lists</h3>
+
+<p>
+Ordered and mutable collections.
+</p>
+
+<pre><code>
+numbers = [1, 2, 3, 4]
+</code></pre>
+
+<h3>Tuples</h3>
+
+<p>
+Ordered collections that cannot normally be changed.
+</p>
+
+<pre><code>
+point = (10, 20)
+</code></pre>
+
+<h3>Dictionaries</h3>
+
+<p>
+Key-value data structures.
+</p>
+
+<pre><code>
+student = {
+    "name": "Aditya",
+    "class": 9
+}
+</code></pre>
+
+</div>
+
+
+<h2>
+  6. Object-Oriented Programming
+</h2>
+
+<p>
+  Object-oriented programming organizes software around
+  objects and classes.
+</p>
+
+<pre><code>
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def introduce(self):
+        print("My name is", self.name)
+
+student = Student("Aditya")
+
+student.introduce()
+</code></pre>
+
+
+<h2>
+  7. Python and AI
+</h2>
+
+<p>
+  Python is particularly useful for AI because its ecosystem
+  includes tools for numerical computing, datasets and
+  machine learning.
+</p>
+
+<p>
+  A common progression is:
+</p>
+
+<div class="card">
+  Python → NumPy → Pandas → Scikit-learn → PyTorch → AI research
+</div>
+
+
+<div class="links">
+
+<a href="wheretolearnpy.html">
+  Where to learn Python →
+</a>
+
+<a href="exepycode.html">
+  Where to run Python →
+</a>
+
+<a href="index.html">
+  Back to portfolio →
+</a>
+
+</div>
+
+</main>
+
+</body>
+</html>
