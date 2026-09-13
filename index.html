@@ -61,6 +61,160 @@
   </script>
 
   <style>
+    /* =========================
+   CONTACT — AKM PORTFOLIO
+========================= */
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section .section-description {
+  margin: 0 auto;
+}
+
+.contact-box {
+  position: relative;
+  max-width: 850px;
+  margin: 45px auto 0;
+  padding: 55px 30px;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(120,145,255,0.16),
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.025)
+    );
+
+  border: 1px solid rgba(255,255,255,0.10);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,0.35),
+    inset 0 0 50px rgba(120,145,255,0.025);
+
+  backdrop-filter: blur(18px);
+
+  overflow: hidden;
+}
+
+.contact-box::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: 50%;
+  top: -180px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(120,160,255,0.15),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+.contact-icon {
+  position: relative;
+
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 1.6rem;
+
+  background:
+    rgba(120,150,255,0.12);
+
+  border:
+    1px solid rgba(140,160,255,0.25);
+
+  box-shadow:
+    0 0 35px rgba(100,130,255,0.15);
+}
+
+.contact-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.email-address {
+  display: inline-block;
+
+  color: #9fafff;
+
+  font-weight: 600;
+
+  font-size: 1rem;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.email-address:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.contact-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.contact-links .button {
+  min-width: 130px;
+}
+
+@media (max-width: 600px) {
+
+  .contact-box {
+    padding: 40px 20px;
+  }
+
+  .email-address {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-links .button {
+    width: 100%;
+  }
+}
     :root{
       --bg:#030812;
       --bg2:#071426;
@@ -669,7 +823,7 @@
             <strong>⌘ GitHub</strong>
             <span>Code, experiments and future research projects.</span>
           </a>
-          <a class="glass card link-card reveal" href="https://www.kaggle.com/" target="_blank" rel="noopener">
+          <a class="glass card link-card reveal" href="https://www.kaggle.com/adityakumarmohanani/" target="_blank" rel="noopener">
             <strong>▣ Kaggle</strong>
             <span>Datasets, machine-learning experiments and data science practice.</span>
           </a>
@@ -677,6 +831,74 @@
       </div>
     </section>
   </main>
+  <!-- =========================
+     CONTACT
+========================= -->
+<section id="contact" class="contact-section">
+
+  <div class="eyebrow">
+    07 / Contact
+  </div>
+
+  <h2>
+    Let's connect.
+  </h2>
+
+  <p class="section-description">
+    For STEM projects, research discussions, technical collaboration,
+    or academic guidance, you can contact me through the email below.
+  </p>
+
+  <div class="contact-box">
+
+    <div class="contact-icon">✉</div>
+
+    <h3>Contact Aditya</h3>
+
+    <p>
+      <a
+        href="mailto:akmstemfoundation@gmail.com?subject=Contact%20from%20AKM%20STEM%20Portfolio"
+        class="email-address"
+      >
+        akmstemfoundation@gmail.com
+      </a>
+    </p>
+
+    <div class="contact-links">
+
+      <a
+        class="button primary"
+        href="mailto:akmstemfoundation@gmail.com?subject=Contact%20from%20AKM%20STEM%20Portfolio"
+        aria-label="Email Aditya Kumar Mohanani"
+      >
+        ✉ Email Me
+      </a>
+
+      <a
+        class="button"
+        href="https://github.com/akm2012-python"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Aditya Kumar Mohanani on GitHub"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        class="button"
+        href="https://youtube.com/@akmstemlab"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit AKM STEM Lab on YouTube"
+      >
+        YouTube ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
   <footer>
     <p><strong>Aditya Kumar Mohanani</strong></p>
